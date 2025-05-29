@@ -7,6 +7,9 @@ using System.Collections.Generic;
 public class RespawnManager : MonoBehaviourPunCallbacks
 {
     private static RespawnManager _instance;
+
+    private CastleManager defenderCastleManager =>     // spawner üzerinden ulaşılıyor
+        spawner != null ? spawner.defenderCastleManager : null;
     public static RespawnManager Instance
     {
         get
@@ -112,9 +115,10 @@ public class RespawnManager : MonoBehaviourPunCallbacks
         if (role == "attacker")
             minionsDone = spawner.playerMinionSpawner != null &&
                           spawner.playerMinionSpawner.AreAllMinionsDead;
-        else
-            minionsDone = spawner.enemyMinionSpawner  != null &&
-                          spawner.enemyMinionSpawner.AreAllMinionsDead;
+        else    // defender ⇒ kale kontrolü
+    minionsDone = defenderCastleManager == null ||
+                  !defenderCastleManager.IsCastleAlive;
+
 
         if (minionsDone)
         {
@@ -146,9 +150,10 @@ public class RespawnManager : MonoBehaviourPunCallbacks
     if (role == "attacker")
         minionsDone = spawner.playerMinionSpawner != null &&
                       spawner.playerMinionSpawner.AreAllMinionsDead;
-    else            // defender
-        minionsDone = spawner.enemyMinionSpawner  != null &&
-                      spawner.enemyMinionSpawner.AreAllMinionsDead;
+    else    // defender
+    minionsDone = defenderCastleManager == null ||
+                  !defenderCastleManager.IsCastleAlive;
+
 
     if (minionsDone)
     {

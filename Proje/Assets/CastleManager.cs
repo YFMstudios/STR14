@@ -8,6 +8,12 @@ public class CastleManager : MonoBehaviourPun
     public GetPlayerData getPlayerData;
     public GameObject CastleObject;
 
+    public bool IsCastleAlive =>
+        CastleObject != null &&
+        CastleObject.activeInHierarchy &&
+        CastleObject.TryGetComponent(out ObjectiveStats os) &&
+        os.health > 0;
+
     // Bu değişkenleri kaldırıp, her seferinde doğrudan GameObject'den alacağız
     // private ObjectiveStats objectiveStats;
     // private Turret turret;
@@ -40,6 +46,8 @@ public class CastleManager : MonoBehaviourPun
             photonView.RPC("SetCastleLevelThree", RpcTarget.AllBuffered);
         }
     }
+
+    
 
     [PunRPC]
     void SetCastleLevelOne()

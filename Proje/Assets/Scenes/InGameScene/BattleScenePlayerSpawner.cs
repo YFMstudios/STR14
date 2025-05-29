@@ -30,11 +30,15 @@ public class BattleScenePlayerSpawner : MonoBehaviourPunCallbacks
     // Respawn kontrolü için değişkenler
     private bool isRespawningAttacker = false;
     private bool isRespawningDefender = false;
+    
+    [Header("Castle Reference")]
+public CastleManager defenderCastleManager;
+
 
     
 
 // Yenisi
-public MinionSpawner      playerMinionSpawner { get; private set; }
+    public MinionSpawner playerMinionSpawner { get; private set; }
 public EnemyMinionSpawner enemyMinionSpawner  { get; private set; }
 
 
@@ -454,7 +458,7 @@ public void NotifyCharacterDied(string role)
         if (role == "attacker")
             willRespawn = playerMinionSpawner != null && !playerMinionSpawner.AreAllMinionsDead;
         else if (role == "defender")
-            willRespawn = enemyMinionSpawner != null && !enemyMinionSpawner.AreAllMinionsDead;
+    willRespawn = defenderCastleManager != null && defenderCastleManager.IsCastleAlive;
 
         /* ───────── Yerel oyuncunun ve kameranın durumu ───────── */
         string myRole = PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue("Role", out object rObj)
@@ -594,7 +598,8 @@ public void NotifyCharacterDied(string role)
         if (role == "attacker")
             canRespawn = playerMinionSpawner != null && !playerMinionSpawner.AreAllMinionsDead;
         else if (role == "defender")
-            canRespawn = enemyMinionSpawner != null && !enemyMinionSpawner.AreAllMinionsDead;
+    canRespawn = defenderCastleManager != null && defenderCastleManager.IsCastleAlive;
+
 
         if (!canRespawn)
         {
@@ -706,7 +711,8 @@ public void ForceRespawnCharacter(string role, int ownerActorNumber = -1)
         if (role == "attacker")
             minionBlock = playerMinionSpawner != null && playerMinionSpawner.AreAllMinionsDead;
         else if (role == "defender")
-            minionBlock = enemyMinionSpawner != null && enemyMinionSpawner.AreAllMinionsDead;
+    minionBlock = defenderCastleManager == null || !defenderCastleManager.IsCastleAlive;
+
 
         if (minionBlock)
         {

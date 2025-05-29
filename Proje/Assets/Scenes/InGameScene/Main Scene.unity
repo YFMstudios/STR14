@@ -8206,6 +8206,10 @@ PrefabInstance:
       propertyPath: spectatorVirtualCam
       value: 
       objectReference: {fileID: 1266505048}
+    - target: {fileID: 3985985596663753878, guid: aa1245356326ab74b80748aa3af0201f, type: 3}
+      propertyPath: defenderCastleManager
+      value: 
+      objectReference: {fileID: 1723985265}
     - target: {fileID: 5098475544744819339, guid: aa1245356326ab74b80748aa3af0201f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8229,7 +8233,7 @@ PrefabInstance:
     - target: {fileID: 6274290637531164765, guid: aa1245356326ab74b80748aa3af0201f, type: 3}
       propertyPath: clonePrefab
       value: 
-      objectReference: {fileID: 8863378062888302169, guid: 2a31247e4a044294c96e354f0eb2f162, type: 3}
+      objectReference: {fileID: 8863378062888302169, guid: 6ccf4758cd9aa524195488ca6cc4a481, type: 3}
     - target: {fileID: 6274290637531164765, guid: aa1245356326ab74b80748aa3af0201f, type: 3}
       propertyPath: abilityImageMain
       value: 
@@ -8855,6 +8859,7 @@ MonoBehaviour:
   respawnDelay: 5
   soldierManager: {fileID: 1624748962}
   cameraManager: {fileID: 1029979377}
+  defenderCastleManager: {fileID: 1723985265}
 --- !u!114 &7704011017306937310
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2750,11 +2750,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &59153333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,11 +3130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &71949618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6362,26 +6362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1807905811}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &141046413
@@ -7421,11 +7406,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &177235671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9289,11 +9274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &237436451
 GameObject:
   m_ObjectHideFlags: 0
@@ -10022,11 +10007,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &248494565
 GameObject:
   m_ObjectHideFlags: 0
@@ -10603,11 +10588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &258403512
 GameObject:
   m_ObjectHideFlags: 0
@@ -10736,11 +10721,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &260565231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12876,11 +12861,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &316653862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13230,26 +13215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 529035889}
-  - {fileID: 1763564669}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &322764927
@@ -13785,26 +13755,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 790308805}
-  - {fileID: 1350065220}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!1 &330614731
@@ -13994,11 +13949,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &331061188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15633,11 +15588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &361875420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17281,11 +17236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &397245110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17997,11 +17952,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &419862982
 GameObject:
   m_ObjectHideFlags: 0
@@ -19243,11 +19198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &447978187
 GameObject:
   m_ObjectHideFlags: 0
@@ -19654,16 +19609,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
-  - {fileID: 24643098}
-  - {fileID: 150145134}
-  - {fileID: 1933665711}
-  - {fileID: 1547663207}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!1 &454413858
@@ -19976,7 +19926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
@@ -20518,11 +20468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &469979496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21943,11 +21893,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &493389792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22182,16 +22132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
-  - {fileID: 24643098}
-  - {fileID: 150145134}
-  - {fileID: 1933665711}
-  - {fileID: 1547663207}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!1 &497695934
@@ -24625,11 +24570,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &546655596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25095,26 +25040,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 790308805}
-  - {fileID: 1350065220}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &553522319
@@ -26334,18 +26264,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
-  - {fileID: 24643098}
-  - {fileID: 150145134}
-  - {fileID: 1933665711}
-  - {fileID: 1547663207}
-  - {fileID: 853090837}
-  - {fileID: 1143580025}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &578889568
@@ -26770,11 +26693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &588473604
 GameObject:
   m_ObjectHideFlags: 0
@@ -26907,11 +26830,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &590245513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27116,11 +27039,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &598128666
 GameObject:
   m_ObjectHideFlags: 0
@@ -30340,11 +30263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &694540124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31651,11 +31574,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &720400290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32575,11 +32498,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &753043236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35345,11 +35268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &828430962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36852,11 +36775,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &873126226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39380,11 +39303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &947821409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39582,26 +39505,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 542236697}
-  - {fileID: 2062310485}
-  - {fileID: 205477674}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &949062700
@@ -41068,18 +40976,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
-  - {fileID: 24643098}
-  - {fileID: 150145134}
-  - {fileID: 1933665711}
-  - {fileID: 1547663207}
-  - {fileID: 853090837}
-  - {fileID: 1143580025}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &987102846
@@ -43537,11 +43438,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1025883900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44467,26 +44368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1807905811}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &1047381719
@@ -44664,11 +44550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1056339682
 GameObject:
   m_ObjectHideFlags: 0
@@ -44903,13 +44789,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
-  - {fileID: 24643098}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &1061333110
@@ -50034,11 +49918,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1185061436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52032,11 +51916,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1238725548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53589,11 +53473,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1279545142
 GameObject:
   m_ObjectHideFlags: 0
@@ -54992,11 +54876,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1315162072
 GameObject:
   m_ObjectHideFlags: 0
@@ -55050,11 +54934,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1315162075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56152,26 +56036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &1339351562
@@ -57726,11 +57595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1361373418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58828,11 +58697,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1382140214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58924,11 +58793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1382465860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60159,11 +60028,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1409823502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61733,11 +61602,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1438899246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62154,11 +62023,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1444855351
 GameObject:
   m_ObjectHideFlags: 0
@@ -63051,11 +62920,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1474688260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67819,12 +67688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!1 &1603951113
@@ -68953,11 +68821,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1623799277
 GameObject:
   m_ObjectHideFlags: 0
@@ -69658,26 +69526,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 790308805}
-  - {fileID: 1350065220}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &1634347157
@@ -70045,11 +69898,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1635748427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74341,11 +74194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1735458979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75263,11 +75116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1755602416
 GameObject:
   m_ObjectHideFlags: 0
@@ -76987,11 +76840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1803705537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78939,11 +78792,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1837495935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79782,26 +79635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 529035889}
-  - {fileID: 1763564669}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &1852564936
@@ -80755,11 +80593,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1874836825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83543,11 +83381,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1939042263
 GameObject:
   m_ObjectHideFlags: 0
@@ -84547,11 +84385,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &1953029650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85548,11 +85386,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &1970608307
 GameObject:
   m_ObjectHideFlags: 0
@@ -88002,11 +87840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &2002777692
 GameObject:
   m_ObjectHideFlags: 0
@@ -88653,11 +88491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &2008262852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89811,26 +89649,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1143580025}
-  - {fileID: 542236697}
-  - {fileID: 2062310485}
-  - {fileID: 205477674}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258403514}
+  - {fileID: 1324317629}
+  - {fileID: 1582282872}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &2027061335
@@ -91185,11 +91008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!1 &2052756648
 GameObject:
   m_ObjectHideFlags: 0
@@ -92603,11 +92426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &2097679216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92696,11 +92519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &2097682691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93375,18 +93198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f28bfb611d89314f9a6299d0ad33fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaynakYoneticisi: {fileID: 0}
+  kaynakYoneticisi: {fileID: 11400000, guid: f855255f0f91bc346bf9a36708a5c6b8, type: 2}
   lockItems:
   - {fileID: 258403514}
   - {fileID: 1324317629}
   - {fileID: 1582282872}
-  - {fileID: 651943183}
-  - {fileID: 24643098}
-  - {fileID: 150145134}
-  - {fileID: 1933665711}
-  - {fileID: 1547663207}
-  - {fileID: 853090837}
-  - {fileID: 1143580025}
   progressBarController: {fileID: 250818655}
   researchActions: {fileID: 11400000, guid: cc68cfab3e725654f9762a2d598e87d6, type: 2}
 --- !u!114 &2106145721
@@ -94786,11 +94602,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d992849d09076345905e583982fbcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TuzakMaliyet1: {fileID: 0}
-  TuzakMaliyet2: {fileID: 0}
-  TuzakMaliyet3: {fileID: 0}
-  KuleMaliyet1: {fileID: 0}
-  KuleMaliyet2: {fileID: 0}
+  TuzakMaliyet1: {fileID: 1718094294}
+  TuzakMaliyet2: {fileID: 2073159029}
+  TuzakMaliyet3: {fileID: 1980944685}
+  KuleMaliyet1: {fileID: 956970806}
+  KuleMaliyet2: {fileID: 935255486}
 --- !u!114 &2138858674
 MonoBehaviour:
   m_ObjectHideFlags: 0

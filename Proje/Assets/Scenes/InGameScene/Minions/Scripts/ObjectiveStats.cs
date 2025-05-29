@@ -51,22 +51,40 @@ public class ObjectiveStats : MonoBehaviourPunCallbacks
 
     public void TakeDamage(float damageAmount)
     {
-        if (!PhotonNetwork.IsMasterClient || !gameObject.activeInHierarchy)
-            return;
-
-        photonView.RPC(nameof(RPC_TakeDamageAll), RpcTarget.All, damageAmount);
+        /* ❶ Kim vurursa vursun: isteği MasterClient'a yönlendir */
+        if (PhotonNetwork.IsMasterClient)
+        {
+            ApplyDamageAndBroadcast(damageAmount);          // bu istemci zaten master
+        }
+        else
+        {
+            /* Sadece master’a “hasar isteği” gönder */
+            photonView.RPC(nameof(RPC_RequestDamageOnMaster), PhotonNetwork.MasterClient, damageAmount);
+        }
     }
 
-    [PunRPC]
-    private void RPC_TakeDamageAll(float damageAmount)
-    {
-        if (!gameObject.activeInHierarchy) return;
+/* ❷ MasterClient gelen isteği işler */
+[PunRPC]
+void RPC_RequestDamageOnMaster(float damageAmount)
+{
+    if (!PhotonNetwork.IsMasterClient) return;          // güvenlik
+    ApplyDamageAndBroadcast(damageAmount);
+}
 
-        accumulatedDamage += damageAmount;
+/* ❸ Gerçek hasar + bütün istemcilere senkronizasyon */
+void ApplyDamageAndBroadcast(float dmg)
+{
+    photonView.RPC(nameof(RPC_TakeDamageAll), RpcTarget.All, dmg);
+}
 
-        if (damageCoroutine == null)
-            damageCoroutine = StartCoroutine(LerpHealth());
-    }
+   [PunRPC]
+private void RPC_TakeDamageAll(float damageAmount)
+{
+    if (!gameObject.activeInHierarchy) return;
+    accumulatedDamage += damageAmount;
+    if (damageCoroutine == null)
+        damageCoroutine = StartCoroutine(LerpHealth());
+}
 
     private IEnumerator LerpHealth()
     {

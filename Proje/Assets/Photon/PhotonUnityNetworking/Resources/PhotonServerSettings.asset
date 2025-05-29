@@ -104,6 +104,7 @@ MonoBehaviour:
   - UpgradeTrapTwoToLevelTwo
   - RPC_DecreaseArcherCount
   - RPC_DecreaseSoldierCount
+  - RPC_RequestDamageOnMaster
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
