@@ -36,21 +36,21 @@ public class WareHousePanelController : MonoBehaviour
         if (Warehouse.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "4000";
-            foodText.text = "3000";
-            woodText.text = "4000";
-            stoneText.text = "3500";
-            ironText.text = "3000";
+            goldText.text = "600";
+            foodText.text = "25";
+            woodText.text = "400";
+            stoneText.text = "300";
+            ironText.text = "30";
             buttonText.text = "Yükselt";
         }
         else if (Warehouse.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "6000";
-            foodText.text = "4500";
-            woodText.text = "5000";
-            stoneText.text = "5000";
-            ironText.text = "5500";
+            goldText.text = "1100";
+            foodText.text = "50";
+            woodText.text = "750";
+            stoneText.text = "550";
+            ironText.text = "60";
             buttonText.text = "Yükselt";
         }
         else if (Warehouse.buildLevel == 3)

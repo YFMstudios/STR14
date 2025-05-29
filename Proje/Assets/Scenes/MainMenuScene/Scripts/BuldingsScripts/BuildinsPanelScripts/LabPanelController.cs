@@ -34,21 +34,21 @@ public class LabPanelController : MonoBehaviour
         if (Lab.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "5000";
-            foodText.text = "4000";
-            woodText.text = "3500";
-            stoneText.text = "4500";
-            ironText.text = "4000";
+            goldText.text = "700";
+            foodText.text = "60";
+            woodText.text = "400";
+            stoneText.text = "150";
+            ironText.text = "120";
                buttonText.text = "Yükselt";
         }
         else if (Lab.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "7500";
-            foodText.text = "6000";
-            woodText.text = "5000";
-            stoneText.text = "7000";
-            ironText.text = "6500";
+            goldText.text = "1200";
+            foodText.text = "90";
+            woodText.text = "700";
+            stoneText.text = "200";
+            ironText.text = "180";
                buttonText.text = "Yükselt";
         }
         else if (Lab.buildLevel == 3)

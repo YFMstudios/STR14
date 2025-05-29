@@ -39,11 +39,11 @@ public class CastlePanelController : MonoBehaviour
         if (Castle.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "5000";
-            foodText.text = "2500";
-            woodText.text = "3500";
-            stoneText.text = "3000";
-            ironText.text = "2000";
+            goldText.text = "800";
+            foodText.text = "60";
+            woodText.text = "600";
+            stoneText.text = "400";
+            ironText.text = "60";
             menzilText.text = "15 br";
             canText.text = "1500";
             saldiriHiziText.text = "7.5 h/s";

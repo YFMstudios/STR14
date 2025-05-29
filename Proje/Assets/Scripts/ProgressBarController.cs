@@ -426,10 +426,10 @@ public class ProgressBarController : MonoBehaviour
     {
 
         totalAltin = ((int)savasciCount * 5) + ((int)okcuCount * 7);
-        totalYemek = ((int)savasciCount * 5) + ((int)okcuCount * 6);
-        totalDemir = ((int)savasciCount * 5) + ((int)okcuCount * 3);
-        totalTas = ((int)savasciCount * 5) + ((int)okcuCount * 2);
-        totalKereste = ((int)savasciCount * 5) + ((int)okcuCount * 10);
+        totalYemek = ((int)savasciCount * 40) + ((int)okcuCount * 35);
+        totalDemir = ((int)savasciCount * 12) + ((int)okcuCount * 15);
+        totalTas = ((int)savasciCount * 18) + ((int)okcuCount * 12);
+        totalKereste = ((int)savasciCount * 30) + ((int)okcuCount * 25);
 
         KaynakYoneticisi.GoldAmount -= (int)totalAltin;
         KaynakYoneticisi.FoodAmount -= (int)totalYemek;
@@ -441,11 +441,11 @@ public class ProgressBarController : MonoBehaviour
     void giveCostBack(float savasciCount, float okcuCount)
     {
 
-        totalAltin = ((int)savasciCount * 5) + ((int)okcuCount * 7);
-        totalYemek = ((int)savasciCount * 5) + ((int)okcuCount * 6);
-        totalDemir = ((int)savasciCount * 5) + ((int)okcuCount * 3);
-        totalTas = ((int)savasciCount * 5) + ((int)okcuCount * 2);
-        totalKereste = ((int)savasciCount * 5) + ((int)okcuCount * 10);
+       totalAltin = ((int)savasciCount * 5) + ((int)okcuCount * 7);
+        totalYemek = ((int)savasciCount * 40) + ((int)okcuCount * 35);
+        totalDemir = ((int)savasciCount * 12) + ((int)okcuCount * 15);
+        totalTas = ((int)savasciCount * 18) + ((int)okcuCount * 12);
+        totalKereste = ((int)savasciCount * 30) + ((int)okcuCount * 25);
 
         KaynakYoneticisi.GoldAmount += (int)totalAltin;
         KaynakYoneticisi.FoodAmount += (int)totalYemek;

@@ -33,21 +33,21 @@ public class HospitalPanelController : MonoBehaviour
         if (Hospital.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "3500";
-            foodText.text = "1800";
-            woodText.text = "2200";
-            stoneText.text = "2000";
-            ironText.text = "1500";
+            goldText.text = "650";
+            foodText.text = "50";
+            woodText.text = "300";
+            stoneText.text = "200";
+            ironText.text = "60";
              buttonText.text = "Yükselt";
         }
         else if (Hospital.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "5000";
-            foodText.text = "2500";
-            woodText.text = "3500";
-            stoneText.text = "3000";
-            ironText.text = "2000";
+            goldText.text = "1200";
+            foodText.text = "80";
+            woodText.text = "550";
+            stoneText.text = "380";
+            ironText.text = "100";
              buttonText.text = "Yükselt";
         }
         else if (Hospital.buildLevel == 3)

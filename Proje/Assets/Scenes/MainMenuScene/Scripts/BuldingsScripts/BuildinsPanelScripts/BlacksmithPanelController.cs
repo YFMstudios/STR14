@@ -33,21 +33,21 @@ public class BlacksmithPanelController : MonoBehaviour
         if (Blacksmith.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "3500";
-            foodText.text = "2000";
-            woodText.text = "1800";
-            stoneText.text = "1500";
-            ironText.text = "1200";
+            goldText.text = "520";
+            foodText.text = "40";
+            woodText.text = "300";
+            stoneText.text = "280";
+            ironText.text = "30";
                buttonText.text = "Yükselt";
         }
         if (Blacksmith.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "7000";
-            foodText.text = "4000";
-            woodText.text = "3600";
-            stoneText.text = "3000";
-            ironText.text = "2400";
+            goldText.text = "1000";
+            foodText.text = "80";
+            woodText.text = "550";
+            stoneText.text = "500";
+            ironText.text = "60";
                buttonText.text = "Yükselt";
         }
         if (Blacksmith.buildLevel == 3)

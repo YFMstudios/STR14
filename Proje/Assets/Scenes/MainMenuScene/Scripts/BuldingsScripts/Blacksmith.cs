@@ -12,40 +12,42 @@ public class Blacksmith : Building
 
     public Blacksmith()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Blacksmith";
         buildingType = BuildingType.ResourceProduction;
         health = 100;
-        buildGoldCost = 2000;
-        buildFoodCost = 1500;
-        buildIronCost = 700;
-        buildStoneCost = 800;
-        buildTimberCost = 1000;
-        buildTime = 1f;
-        ironProductionRate = 5;
+        buildGoldCost = 260;
+        buildFoodCost = 20;
+        buildIronCost = 15;
+        buildStoneCost = 90;
+        buildTimberCost = 0;
+        buildTime = 20f;
+        ironProductionRate = 3;
     }
 
 
     public override void UpdateCosts()
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (buildLevel == 1)
         {
-            buildGoldCost = 3500;
-            buildFoodCost = 2000;
-            buildIronCost = 1200;
-            buildStoneCost = 1500;
-            buildTimberCost = 1800;
-            buildTime = 1f;
+            buildGoldCost = 520;
+            buildFoodCost = 40;
+            buildIronCost = 30;
+            buildStoneCost = 280;
+            buildTimberCost = 300;
+            buildTime = 30f;
+            ironProductionRate = 5;
         }
         else if (buildLevel == 2)
         {
-            buildGoldCost = 7000;
-            buildFoodCost = 4000;
-            buildIronCost = 2400;
-            buildStoneCost = 3000;
-            buildTimberCost = 3600;
-            buildTime = 1f;
+            buildGoldCost = 1000;
+            buildFoodCost = 80;
+            buildIronCost = 60;
+            buildStoneCost = 500;
+            buildTimberCost = 550;
+            buildTime = 40f;
+            ironProductionRate = 7;
         }
     }
 
@@ -53,18 +55,18 @@ public class Blacksmith : Building
     {
         if (buildLevel == 1)
         {
-            ironProductionRate = 5;
+            ironProductionRate = 3;
             goldProductionRateBlacksmith = 1;
         }
         else if (buildLevel == 2)
         {
-            ironProductionRate = 7;
+            ironProductionRate = 5;
             goldProductionRateBlacksmith = 2;
         }
         else if (buildLevel == 3)
         {
-            ironProductionRate = 10;
-            goldProductionRateBlacksmith = 2;
+            ironProductionRate = 7;
+            goldProductionRateBlacksmith = 3;
         }
     }
 

@@ -4,49 +4,52 @@ using UnityEngine;
 
 public class Sawmill : Building
 {
-    // Ekstra özellikler
+    // Ekstra ï¿½zellikler
     public static int timberProductionRate;
     public static int goldProductionRateSawmill;
     public static bool canIStartProduction;
 
     public static int buildLevel;
     public static bool wasSawmillCreated;
-    // Kurucu yöntem
+    // Kurucu yï¿½ntem
     public Sawmill()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Sawmill";
         buildingType = BuildingType.ResourceProduction;
         health = 100;
-        buildGoldCost = 1200;
-        buildFoodCost = 900;
-        buildIronCost = 500;
-        buildStoneCost = 600;
-        buildTimberCost = 800;
+        buildGoldCost = 200;
+        buildFoodCost = 20;
+        buildIronCost = 10;
+        buildStoneCost = 60;
+        buildTimberCost = 80;
         buildTime = 15f;
-        timberProductionRate = 5;
+        timberProductionRate = 6;
     }
 
     public override void UpdateCosts()
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (buildLevel == 1)
         {
-            buildGoldCost = 2000;
-            buildFoodCost = 1600;
-            buildIronCost = 1000;
-            buildStoneCost = 1300;
-            buildTimberCost = 1600;
-            buildTime = 2f;
+            buildGoldCost = 450;
+            buildFoodCost = 40;
+            buildIronCost = 20;
+            buildStoneCost = 150;
+            buildTimberCost = 250;
+            buildTime = 25f;
+            timberProductionRate = 12;
+
         }
         else if (buildLevel == 2)
         {
-            buildGoldCost = 4000;
-            buildFoodCost = 3200;
-            buildIronCost = 2000;
-            buildStoneCost = 2600;
-            buildTimberCost = 3200;
-            buildTime = 3f;
+            buildGoldCost = 900;
+            buildFoodCost = 80;
+            buildIronCost = 40;
+            buildStoneCost = 300;
+            buildTimberCost = 500;
+            buildTime = 35f;
+            timberProductionRate = 18;
         }
     }
 
@@ -54,17 +57,17 @@ public class Sawmill : Building
     {
         if (buildLevel == 1)
         {
-            timberProductionRate = 20;
+            timberProductionRate = 6;
             goldProductionRateSawmill = 1;
         }
         else if (buildLevel == 2)
         {
-            timberProductionRate = 25;
+            timberProductionRate = 12;
             goldProductionRateSawmill = 2;
         }
         else if (buildLevel == 3)
         {
-            timberProductionRate = 30;
+            timberProductionRate = 18;
             goldProductionRateSawmill = 3;
         }
     }

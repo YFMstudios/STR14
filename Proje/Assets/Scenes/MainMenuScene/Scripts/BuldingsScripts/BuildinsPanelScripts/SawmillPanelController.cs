@@ -35,21 +35,21 @@ TextMeshProUGUI buttonText = buildSamwillButton.GetComponentInChildren<TextMeshP
         if (Sawmill.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "2000";
-            foodText.text = "1600";
-            woodText.text = "1600";
-            stoneText.text = "1300";
-            ironText.text = "1000";
+            goldText.text = "450";
+            foodText.text = "40";
+            woodText.text = "250";
+            stoneText.text = "150";
+            ironText.text = "120";
              buttonText.text = "Yükselt";
         }
         if (Sawmill.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "4000";
-            foodText.text = "3200";
-            woodText.text = "3200";
-            stoneText.text = "2600";
-            ironText.text = "2000";
+            goldText.text = "900";
+            foodText.text = "80";
+            woodText.text = "500";
+            stoneText.text = "300";
+            ironText.text = "40";
              buttonText.text = "Yükselt";
         }
         if (Sawmill.buildLevel == 3)

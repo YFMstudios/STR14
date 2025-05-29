@@ -9,16 +9,16 @@ public class Lab : Building
     public static int buildLevel;
     public Lab()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Lab";
         buildingType = BuildingType.Research;
         health = 100;
-        buildGoldCost = 3000;
-        buildFoodCost = 2500;
-        buildIronCost = 2500;
-        buildStoneCost = 3000;
-        buildTimberCost = 2000;
-        buildTime = 1f;
+        buildGoldCost = 300;
+        buildFoodCost = 30;
+        buildIronCost = 60;
+        buildStoneCost = 100;
+        buildTimberCost = 150;
+        buildTime = 25f;
     }
 
 
@@ -27,21 +27,21 @@ public class Lab : Building
     {
         if (buildLevel == 2)
         {
-            buildGoldCost = 5000;    // 2. Seviye maliyet
-            buildFoodCost = 4000;
-            buildIronCost = 4000;
-            buildStoneCost = 4500;
-            buildTimberCost = 3500;
-            buildTime = 1f;
+            buildGoldCost = 700;    // 2. Seviye maliyet
+            buildFoodCost = 60;
+            buildIronCost = 120;
+            buildStoneCost = 150;
+            buildTimberCost = 400;
+            buildTime = 35f;
         }
         else if (buildLevel == 3)
         {
-            buildGoldCost = 7500;    // 3. Seviye maliyet
-            buildFoodCost = 6000;
-            buildIronCost = 6500;
-            buildStoneCost = 7000;
-            buildTimberCost = 5000;
-            buildTime = 1f;
+            buildGoldCost = 1200;    // 3. Seviye maliyet
+            buildFoodCost = 90;
+            buildIronCost = 180;
+            buildStoneCost = 200;
+            buildTimberCost = 700;
+            buildTime = 45f;
         }
     }
 }

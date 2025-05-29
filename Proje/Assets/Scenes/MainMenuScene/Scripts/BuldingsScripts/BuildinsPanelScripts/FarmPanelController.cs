@@ -35,21 +35,21 @@ public class FarmPanelController : MonoBehaviour
         if (Farm.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "2200";
-            foodText.text = "1000";
-            woodText.text = "1600";
-            stoneText.text = "700";
-            ironText.text = "400";
+            goldText.text = "400";
+            foodText.text = "25";
+            woodText.text = "200";
+            stoneText.text = "120";
+            ironText.text = "20";
             buttonText.text = "Yükselt";
         }
         if (Farm.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "3600";
-            foodText.text = "2000";
-            woodText.text = "3200";
-            stoneText.text = "1200";
-            ironText.text = "800";
+            goldText.text = "760";
+            foodText.text = "60";
+            woodText.text = "400";
+            stoneText.text = "240";
+            ironText.text = "40";
             buttonText.text = "Yükselt";
         }
         if (Farm.buildLevel == 3)

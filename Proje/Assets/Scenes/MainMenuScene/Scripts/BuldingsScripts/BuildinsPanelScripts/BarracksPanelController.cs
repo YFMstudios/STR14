@@ -47,11 +47,11 @@ public class BarracksPanelController : MonoBehaviour
         else if (Barracks.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "3000";
-            foodText.text = "2000";
-            woodText.text = "2200";
-            stoneText.text = "1800";
-            ironText.text = "1500";
+            goldText.text = "600";
+            foodText.text = "60";
+            woodText.text = "350";
+            stoneText.text = "150";
+            ironText.text = "100";
              buttonText.text = "Yükselt";
             refreshSavasciOzellikleri();
             refreshOkcuOzellikleri();
@@ -59,11 +59,11 @@ public class BarracksPanelController : MonoBehaviour
         else if (Barracks.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "4500";
-            foodText.text = "3000";
-            woodText.text = "3000";
-            stoneText.text = "2500";
-            ironText.text = "2000";
+            goldText.text = "1000";
+            foodText.text = "90";
+            woodText.text = "600";
+            stoneText.text = "200";
+            ironText.text = "150";
              buttonText.text = "Yükselt";
             refreshSavasciOzellikleri();
             refreshOkcuOzellikleri();

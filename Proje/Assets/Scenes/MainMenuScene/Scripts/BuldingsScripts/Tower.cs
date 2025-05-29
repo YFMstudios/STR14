@@ -11,74 +11,70 @@ public class Tower : Building
 
     public Tower()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Castle";
         buildingType = BuildingType.Defense;
         health = 100;
-        buildGoldCost = 2000;
-        buildFoodCost = 1200;
-        buildIronCost = 750;
-        buildStoneCost = 1000;
-        buildTimberCost = 1500;
-        buildTime = 10f;
-        //Bunlarý deðiþtirirsen TowerHoverHandler'ý da deðiþtir. !!!!!!
+        buildGoldCost = 220;
+        buildFoodCost = 20;
+        buildIronCost = 40;
+        buildStoneCost = 160;
+        buildTimberCost = 220;
+        buildTime = 20f;
+        //Bunlarï¿½ deï¿½iï¿½tirirsen TowerHoverHandler'ï¿½ da deï¿½iï¿½tir. !!!!!!
     }
 
     public void UpdateTowerOneCosts(Tower towerOne)
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (towerOneBuildLevel == 1)
         {
-            towerOne.buildGoldCost = 3000;
-            towerOne.buildFoodCost = 2000;
-            towerOne.buildIronCost = 1500;
-            towerOne.buildStoneCost = 1800;
-            towerOne.buildTimberCost = 2200;
-            towerOne.buildTime = 15f;
+            towerOne.buildGoldCost = 500;
+            towerOne.buildFoodCost = 40;
+            towerOne.buildIronCost = 80;
+            towerOne.buildStoneCost = 300;
+            towerOne.buildTimberCost = 450;
+            towerOne.buildTime = 30f;
         }
         else if (towerOneBuildLevel == 2)
         {
-            towerOne.buildGoldCost = 4500;
-            towerOne.buildFoodCost = 3000;
-            towerOne.buildIronCost = 2000;
-            towerOne.buildStoneCost = 2500;
-            towerOne.buildTimberCost = 3000;
-            towerOne.buildTime = 20f;
+            towerOne.buildGoldCost = 900;
+            towerOne.buildFoodCost = 60;
+            towerOne.buildIronCost = 120;
+            towerOne.buildStoneCost = 500;
+            towerOne.buildTimberCost = 800;
+            towerOne.buildTime = 40f;
         }
+    }
+
+public static event System.Action OnAnyTowerLevelChanged;
+    public void LevelUpTowerOne()
+    {
+        towerOneBuildLevel++;
+        OnAnyTowerLevelChanged?.Invoke();   // ðŸ””
     }
 
     public void UpdateTowerTwoCosts(Tower towerTwo)
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (towerTwoBuildLevel == 1)
         {
-            towerTwo.buildGoldCost = 3000;
-            towerTwo.buildFoodCost = 2000;
-            towerTwo.buildIronCost = 1500;
-            towerTwo.buildStoneCost = 1800;
-            towerTwo.buildTimberCost = 2200;
-            towerTwo.buildTime = 15f;
+            towerTwo.buildGoldCost = 500;
+            towerTwo.buildFoodCost = 40;
+            towerTwo.buildIronCost = 80;
+            towerTwo.buildStoneCost = 300;
+            towerTwo.buildTimberCost = 450;
+            towerTwo.buildTime = 30f;
         }
         else if (towerTwoBuildLevel == 2)
         {
-            towerTwo.buildGoldCost = 4500;
-            towerTwo.buildFoodCost = 3000;
-            towerTwo.buildIronCost = 2000;
-            towerTwo.buildStoneCost = 2500;
-            towerTwo.buildTimberCost = 3000;
-            towerTwo.buildTime = 20f;
+            towerTwo.buildGoldCost = 900;
+            towerTwo.buildFoodCost = 60;
+            towerTwo.buildIronCost = 120;
+            towerTwo.buildStoneCost = 500;
+            towerTwo.buildTimberCost = 800;
+            towerTwo.buildTime = 40f;
         }
     }
 
-    public void upgradeTowerOneStats()
-    {
-        //Furkanýn Sahnesindeki özellikleri arttýr.
-        Debug.Log("Furkanýn sahnedeki deðiþkenleri burada deðiþtir.");
-    }
-
-    public void upgradeTowerTwoStats()
-    {
-        //Furkanýn Sahnesindeki özellikleri arttýr.
-        Debug.Log("Furkanýn sahnedeki deðiþkenleri burada deðiþtir.");
-    }
 }

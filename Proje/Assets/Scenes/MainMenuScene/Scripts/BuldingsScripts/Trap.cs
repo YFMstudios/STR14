@@ -1,120 +1,124 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
+/// <summary>
+///   Üç ayrı tuzak (Trap-1 / Trap-2 / Trap-3) için seviye ve maliyet
+///   yönetimi.  Herhangi bir tuzak seviyesi değiştiğinde
+///   <c>OnAnyTrapLevelChanged</c> olayı yayınlanır; UI buna abone olur.
+/// </summary>
 public class Trap : Building
 {
-    // Tuzak seviyeleri ve olu�turulma durumlar�
-    public static int trapOneBuildLevel;
+    /* ──────────────────────────────────────────────────────────
+       GLOBAL ALANLAR – Seviye bilgisi + oluşturulma bayrakları
+    ────────────────────────────────────────────────────────── */
+    public static int  trapOneBuildLevel;
+    public static int  trapTwoBuildLevel;
+    public static int  trapThreeBuildLevel;
+
     public static bool wasTrapOneCreated;
-
-    public static int trapTwoBuildLevel;
     public static bool wasTrapTwoCreated;
-
-    public static int trapThreeBuildLevel;
     public static bool wasTrapThreeCreated;
 
+    /* ──────────────────────────────────────────────────────────
+       OLAY – Seviye değiştiğinde UI’lara haber verir
+    ────────────────────────────────────────────────────────── */
+    public static event Action OnAnyTrapLevelChanged;
+    static void Notify() => OnAnyTrapLevelChanged?.Invoke();
 
-
+    /* ──────────────────────────────────────────────────────────
+       CTOR – 0. seviye başlangıç maliyetleri
+    ────────────────────────────────────────────────────────── */
     public Trap()
     {
-        // �zelliklerin ba�lang�� de�erlerini atama
-        buildingName = "Trap";
-        buildingType = BuildingType.Defense;
-        health = 50;
-        buildGoldCost = 1000;
-        buildFoodCost = 500;
-        buildIronCost = 300;
-        buildStoneCost = 400;
-        buildTimberCost = 600;
-        buildTime = 5f;
+        buildingName  = "Trap";
+        buildingType  = BuildingType.Defense;
+
+        health        = 50;
+
+        buildGoldCost   = 160;
+        buildFoodCost   = 10;
+        buildIronCost   = 30;
+        buildStoneCost  = 120;
+        buildTimberCost = 140;
+
+        buildTime     = 15f;
     }
 
-    // Tuzak 1 maliyet g�ncelleyici
+    /* ──────────────────────────────────────────────────────────
+       1) TRAP-1 Maliyet Güncelle
+    ────────────────────────────────────────────────────────── */
     public void UpdateTrapOneCosts(Trap trapOne)
     {
-        if (trapOneBuildLevel == 1)
+        if      (trapOneBuildLevel == 1)
         {
-            trapOne.buildGoldCost = 1500;
-            trapOne.buildFoodCost = 1000;
-            trapOne.buildIronCost = 500;
-            trapOne.buildStoneCost = 700;
-            trapOne.buildTimberCost = 900;
-            trapOne.buildTime = 7f;
+            trapOne.buildGoldCost   = 380;
+            trapOne.buildFoodCost   = 25;
+            trapOne.buildIronCost   = 60;
+            trapOne.buildStoneCost  = 240;
+            trapOne.buildTimberCost = 300;
+            trapOne.buildTime       = 25f;
         }
         else if (trapOneBuildLevel == 2)
         {
-            trapOne.buildGoldCost = 2000;
-            trapOne.buildFoodCost = 1500;
-            trapOne.buildIronCost = 750;
-            trapOne.buildStoneCost = 1000;
-            trapOne.buildTimberCost = 1200;
-            trapOne.buildTime = 10f;
+            trapOne.buildGoldCost   = 700;
+            trapOne.buildFoodCost   = 50;
+            trapOne.buildIronCost   = 90;
+            trapOne.buildStoneCost  = 400;
+            trapOne.buildTimberCost = 550;
+            trapOne.buildTime       = 35f;
         }
+        Notify();
     }
 
-    // Tuzak 2 maliyet g�ncelleyici
+    /* ──────────────────────────────────────────────────────────
+       2) TRAP-2 Maliyet Güncelle
+    ────────────────────────────────────────────────────────── */
     public void UpdateTrapTwoCosts(Trap trapTwo)
     {
-        if (trapTwoBuildLevel == 1)
+        if      (trapTwoBuildLevel == 1)
         {
-            trapTwo.buildGoldCost = 1500;
-            trapTwo.buildFoodCost = 1000;
-            trapTwo.buildIronCost = 500;
-            trapTwo.buildStoneCost = 700;
-            trapTwo.buildTimberCost = 900;
-            trapTwo.buildTime = 7f;
+            trapTwo.buildGoldCost   = 380;
+            trapTwo.buildFoodCost   = 25;
+            trapTwo.buildIronCost   = 60;
+            trapTwo.buildStoneCost  = 240;
+            trapTwo.buildTimberCost = 300;
+            trapTwo.buildTime       = 25f;
         }
         else if (trapTwoBuildLevel == 2)
         {
-            trapTwo.buildGoldCost = 2000;
-            trapTwo.buildFoodCost = 1500;
-            trapTwo.buildIronCost = 750;
-            trapTwo.buildStoneCost = 1000;
-            trapTwo.buildTimberCost = 1200;
-            trapTwo.buildTime = 10f;
+            trapTwo.buildGoldCost   = 700;
+            trapTwo.buildFoodCost   = 50;
+            trapTwo.buildIronCost   = 90;
+            trapTwo.buildStoneCost  = 400;
+            trapTwo.buildTimberCost = 550;
+            trapTwo.buildTime       = 35f;
         }
+        Notify();
     }
 
-    // Tuzak 3 maliyet g�ncelleyici
+    /* ──────────────────────────────────────────────────────────
+       3) TRAP-3 Maliyet Güncelle
+    ────────────────────────────────────────────────────────── */
     public void UpdateTrapThreeCosts(Trap trapThree)
     {
-        if (trapThreeBuildLevel == 1)
+        if      (trapThreeBuildLevel == 1)
         {
-            trapThree.buildGoldCost = 1500;
-            trapThree.buildFoodCost = 1000;
-            trapThree.buildIronCost = 500;
-            trapThree.buildStoneCost = 700;
-            trapThree.buildTimberCost = 900;
-            trapThree.buildTime = 7f;
+            trapThree.buildGoldCost   = 380;
+            trapThree.buildFoodCost   = 25;
+            trapThree.buildIronCost   = 60;
+            trapThree.buildStoneCost  = 240;
+            trapThree.buildTimberCost = 300;
+            trapThree.buildTime       = 25f;
         }
         else if (trapThreeBuildLevel == 2)
         {
-            trapThree.buildGoldCost = 2000;
-            trapThree.buildFoodCost = 1500;
-            trapThree.buildIronCost = 750;
-            trapThree.buildStoneCost = 1000;
-            trapThree.buildTimberCost = 1200;
-            trapThree.buildTime = 10f;
+            trapThree.buildGoldCost   = 700;
+            trapThree.buildFoodCost   = 50;
+            trapThree.buildIronCost   = 90;
+            trapThree.buildStoneCost  = 400;
+            trapThree.buildTimberCost = 550;
+            trapThree.buildTime       = 35f;
         }
-    }
-
-    // Tuzak 1 geli�tirme i�lemleri
-    public void upgradeTrapOneStats()
-    {
-        Debug.Log("Tuzak 1'in sahnedeki �zelliklerini geli�tir.");
-    }
-
-    // Tuzak 2 geli�tirme i�lemleri
-    public void upgradeTrapTwoStats()
-    {
-        Debug.Log("Tuzak 2'nin sahnedeki �zelliklerini geli�tir.");
-    }
-
-    // Tuzak 3 geli�tirme i�lemleri
-    public void upgradeTrapThreeStats()
-    {
-        Debug.Log("Tuzak 3'�n sahnedeki �zelliklerini geli�tir.");
+        Notify();
     }
 }
-

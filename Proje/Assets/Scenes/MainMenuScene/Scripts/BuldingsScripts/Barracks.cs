@@ -9,38 +9,38 @@ public class Barracks : Building
 
     public Barracks()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Barracks";
         buildingType = BuildingType.UnitProduction;
         health = 100;
-        buildGoldCost = 2000;
-        buildFoodCost = 1200;
-        buildIronCost = 750;
-        buildStoneCost = 1000;
-        buildTimberCost = 1500;
-        buildTime = 1f;
+        buildGoldCost = 260;
+        buildFoodCost = 30;
+        buildIronCost = 50;
+        buildStoneCost = 100;
+        buildTimberCost = 150;
+        buildTime = 20f;
     }
 
     public override void UpdateCosts()
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (buildLevel == 1)
         {
-            buildGoldCost = 3000;
-            buildFoodCost = 2000;
-            buildIronCost = 1500;
-            buildStoneCost = 1800;
-            buildTimberCost = 2200;
-            buildTime = 10f;
+            buildGoldCost = 600;
+            buildFoodCost = 60;
+            buildIronCost = 100;
+            buildStoneCost = 150;
+            buildTimberCost = 350;
+            buildTime =30f;
         }
         else if (buildLevel == 2)
         {
-            buildGoldCost = 4500;
-            buildFoodCost = 3000;
-            buildIronCost = 2000;
-            buildStoneCost = 2500;
-            buildTimberCost = 3000;
-            buildTime = 15f;
+            buildGoldCost = 1000;
+            buildFoodCost = 90;
+            buildIronCost = 150;
+            buildStoneCost = 200;
+            buildTimberCost = 600;
+            buildTime = 40f;
         }
     }
 }

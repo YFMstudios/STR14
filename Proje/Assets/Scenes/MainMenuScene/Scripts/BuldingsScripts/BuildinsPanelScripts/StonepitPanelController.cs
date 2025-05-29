@@ -34,21 +34,21 @@ public class StonepitPanelController : MonoBehaviour
         if (StonePit.buildLevel == 1)
         {
             buildLevelText.text = "1";
-            goldText.text = "3200";
-            foodText.text = "1800";
-            woodText.text = "1600";
-            stoneText.text = "1300";
-            ironText.text = "1000";
+            goldText.text = "430";
+            foodText.text = "25";
+            woodText.text = "230";
+            stoneText.text = "170";
+            ironText.text = "25";
              buttonText.text = "Yükselt";
         }
         if (StonePit.buildLevel == 2)
         {
             buildLevelText.text = "2";
-            goldText.text = "6500";
-            foodText.text = "3600";
-            woodText.text = "3200";
-            stoneText.text = "2600";
-            ironText.text = "2000";
+            goldText.text = "850";
+            foodText.text = "80";
+            woodText.text = "460";
+            stoneText.text = "330";
+            ironText.text = "50";
              buttonText.text = "Yükselt";
         }
         if (StonePit.buildLevel == 3)

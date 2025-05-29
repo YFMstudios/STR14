@@ -5,10 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// StonePit sýnýfý, Building sýnýfýndan kalýtým alýr
+// StonePit sï¿½nï¿½fï¿½, Building sï¿½nï¿½fï¿½ndan kalï¿½tï¿½m alï¿½r
 public class StonePit : Building
 {
-    // Ekstra özellikler
+    // Ekstra ï¿½zellikler
 
     public static int stoneProductionRate;
     public static int goldProductionRateStonePit;
@@ -17,20 +17,20 @@ public class StonePit : Building
     public static int buildLevel;
     public static bool wasStonePitCreated;
 
-    // Kurucu yöntem
+    // Kurucu yï¿½ntem
     public StonePit()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Stonepit";
         buildingType = BuildingType.ResourceProduction;
         health = 100;
-        buildGoldCost = 1800;
-        buildFoodCost = 1200;
-        buildIronCost = 500;
-        buildStoneCost = 600;
-        buildTimberCost = 900;
+        buildGoldCost = 200;
+        buildFoodCost = 20;
+        buildIronCost = 10;
+        buildStoneCost = 70;
+        buildTimberCost = 70;
         buildTime = 15f;
-        stoneProductionRate = 3;
+        stoneProductionRate = 5;
 
     }
 
@@ -40,41 +40,45 @@ public class StonePit : Building
     {
         if (buildLevel == 1)
         {
-            stoneProductionRate = 3;
+            stoneProductionRate = 5;
             goldProductionRateStonePit = 1;
         }
         else if (buildLevel == 2)
         {
-            stoneProductionRate = 5;
+            stoneProductionRate = 10;
             goldProductionRateStonePit = 2;
         }
         else if (buildLevel == 3)
         {
-            stoneProductionRate = 12;
+            stoneProductionRate = 15;
             goldProductionRateStonePit = 3;
         }
     }
 
     public override void UpdateCosts()
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (buildLevel == 1)
         {
-            buildGoldCost = 3200;
-            buildFoodCost = 1800;
-            buildIronCost = 1000;
-            buildStoneCost = 1300;
-            buildTimberCost = 1600;
-            buildTime = 5f;
+            buildGoldCost = 430;
+            buildFoodCost = 40;
+            buildIronCost = 25;
+            buildStoneCost = 170;
+            buildTimberCost = 230;
+            buildTime = 25f;
+            stoneProductionRate = 10;
+
         }
         else if (buildLevel == 2)
         {
-            buildGoldCost = 6500;
-            buildFoodCost = 3600;
-            buildIronCost = 2000;
-            buildStoneCost = 2600;
-            buildTimberCost = 3200;
-            buildTime = 7f;
+            buildGoldCost = 850;
+            buildFoodCost = 80;
+            buildIronCost = 50;
+            buildStoneCost = 330;
+            buildTimberCost = 460;
+            buildTime = 35f;
+             stoneProductionRate = 15;
+
         }
     }
 }

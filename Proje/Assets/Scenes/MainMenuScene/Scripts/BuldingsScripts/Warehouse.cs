@@ -19,64 +19,64 @@ public class Warehouse : Building
 
     public Warehouse()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Warehouse";
         buildingType = BuildingType.ResourceProduction;
         health = 100;
-        buildGoldCost = 2000;
-        buildFoodCost = 1500;
-        buildIronCost = 1500;
-        buildStoneCost = 2000;
-        buildTimberCost = 2500;
-        buildTime = 5f;
+        buildGoldCost = 250;
+        buildFoodCost = 10;
+        buildIronCost = 15;
+        buildStoneCost = 120;
+        buildTimberCost = 180;
+        buildTime = 20f;
     }
 
     public static void IncreaseCapacity()
     {
         if (buildLevel == 1)
         {
-            Warehouse.foodCapacity += 10;
-            Warehouse.stoneCapacity += 10;
-            Warehouse.timberCapacity += 10;
-            Warehouse.ironCapacity += 10;
-        }
-        if (buildLevel == 2)
-        {
-            Warehouse.foodCapacity += 10;
-            Warehouse.stoneCapacity += 10;
-            Warehouse.timberCapacity += 10;
-            Warehouse.ironCapacity += 10;
-        }
-        if (buildLevel == 3)
-        {
-            Warehouse.foodCapacity += 10;
-            Warehouse.stoneCapacity += 10;
-            Warehouse.timberCapacity += 10;
-            Warehouse.ironCapacity += 10;
+            Warehouse.foodCapacity = 1200;
+            Warehouse.stoneCapacity = 1000;
+            Warehouse.timberCapacity = 1000;
+            Warehouse.ironCapacity = 800;
+
+            if (buildLevel == 2)
+            {
+                Warehouse.foodCapacity = 3600;
+                Warehouse.stoneCapacity = 3000;
+                Warehouse.timberCapacity = 3000;
+                Warehouse.ironCapacity = 2400;
+            }
+            if (buildLevel == 3)
+            {
+                Warehouse.foodCapacity = 8000;
+                Warehouse.stoneCapacity = 7000;
+                Warehouse.timberCapacity = 7000;
+                Warehouse.ironCapacity = 6000;
+            }
         }
     }
 
-
     public override void UpdateCosts()
     {
-        // Bina seviyesine göre maliyet güncelleme
+        // Bina seviyesine gï¿½re maliyet gï¿½ncelleme
         if (buildLevel == 1)
         {
-            buildGoldCost = 4000;
-            buildFoodCost = 3000;
-            buildIronCost = 3000;
-            buildStoneCost = 3500;
-            buildTimberCost = 4000;
-            buildTime = 10f;
+            buildGoldCost = 600;
+            buildFoodCost = 25;
+            buildIronCost = 30;
+            buildStoneCost = 300;
+            buildTimberCost = 400;
+            buildTime = 30;
         }
         else if (buildLevel == 2)
         {
-            buildGoldCost = 6000;
-            buildFoodCost = 4500;
-            buildIronCost = 4000;
-            buildStoneCost = 5000;
-            buildTimberCost = 5500;
-            buildTime = 15f;
+            buildGoldCost = 1100;
+            buildFoodCost = 50;
+            buildIronCost = 60;
+            buildStoneCost = 550;
+            buildTimberCost = 750;
+            buildTime = 40;
         }
     }
 }

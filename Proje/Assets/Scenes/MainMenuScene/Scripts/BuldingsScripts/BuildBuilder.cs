@@ -24,6 +24,7 @@ public class BuildBuilder : MonoBehaviour
     public Button buildTrapOneButton;
     public Button buildTrapTwoButton;
     public Button buildTrapThreeButton;
+    
 
     private Text buttonText;
 
@@ -155,14 +156,14 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                LogManager.Instance.LogEkle("Yeterli Kaynak Bulunmamaktadır.");
+                 LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
         else
         {
             Debug.Log("Mevcut StonePit yükseltiliyor, seviye: " + StonePit.buildLevel);
             // Zaten bir taş ocağı varsa, yeni bir nesne yaratmayın
-            if (StonePit.buildLevel == 1)
+            if (StonePit.buildLevel == 1 && Castle.buildLevel == 2)
             {
                 Debug.Log("StonePit seviye 1'den seviye 2'ye yükseltiliyor");
                 TextMeshProUGUI buttonText = buildStonePitButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -222,11 +223,13 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Seviye 2 için yeterli kaynak bulunmamaktadır");
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                 LogManager.Instance.LogEkle("Kale Binası 2 Level Olmak Zorundadır.");
             }
 
-            else if (StonePit.buildLevel == 2)
+             if (StonePit.buildLevel == 2 && Sawmill.buildLevel==2 && Castle.buildLevel==3)
             {
                 Debug.Log("StonePit seviye 2'den seviye 3'e yükseltiliyor");
                 TextMeshProUGUI buttonText = buildStonePitButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -284,12 +287,12 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Seviye 3 için yeterli kaynak bulunmamaktadır");
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildStonePit fonksiyonunu kontrol ediniz. Beklenmeyen buildLevel: " + StonePit.buildLevel);
+                LogManager.Instance.LogEkle("Kale Binası Level 3 ve Keresteci Binası Level 2 Olmak Zorundadır.");
             }
         }
     }
@@ -356,13 +359,13 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Yeterli kaynak bulunmamaktadır");
+                 LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
         else
         {
             Debug.Log("Demirci zaten var.");
-            if (Blacksmith.buildLevel == 1)
+            if (Blacksmith.buildLevel == 1 && StonePit.buildLevel == 2 && Castle.buildLevel == 2)
             {
 
                 TextMeshProUGUI buttonText = buildBlacksmithButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -405,10 +408,12 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktadır");
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                 LogManager.Instance.LogEkle("Kale ve Taş Ocagı Binası 2 Level Olmak Zorundadır. ");
             }
-            else if (Blacksmith.buildLevel == 2)
+             if (Blacksmith.buildLevel == 2 && Lab.buildLevel==2 && Castle.buildLevel==3)
             {
 
 
@@ -446,10 +451,14 @@ public class BuildBuilder : MonoBehaviour
                         }
                     }));
                 }
+                else
+                {
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki BuildBlacksmith fonksiyonunu kontrol ediniz.");
+                LogManager.Instance.LogEkle("Laboratuvar Binası Level 2 ve Kale Binası Level 3 Olmak Zorundadır.");
             }
         }
     }
@@ -516,13 +525,13 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Yeterli kaynak bulunmamaktad�r");
+              LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
         else
         {
             // Zaten bir kereste oca�� varsa, yeni bir nesne yaratmay�n
-            if (Sawmill.buildLevel == 1)
+            if (Sawmill.buildLevel == 1 && Castle.buildLevel == 2)
             {
                 TextMeshProUGUI buttonText = buildSawmillButton.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -567,11 +576,13 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                LogManager.Instance.LogEkle("Kale Binasını 2 Level Olmak Zorundadır.");
             }
 
-            else if (Sawmill.buildLevel == 2)
+            if (Sawmill.buildLevel == 2 && Castle.buildLevel == 3 && Warehouse.buildLevel == 2)
             {
                 TextMeshProUGUI buttonText = buildSawmillButton.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -612,10 +623,15 @@ public class BuildBuilder : MonoBehaviour
                         }
                     }));
                 }
+                else
+                {
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
+               
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildSawmill fonksiyonunu kontrol ediniz.");
+                LogManager.Instance.LogEkle("Kale Binası Level 3 ve Ambar Binası Level 2 Olmak Zorundadır.");
             }
         }
     }
@@ -680,13 +696,13 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                 LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
         else
         {
             // Zaten bir �iftlik varsa, yeni bir nesne yaratmay�n
-            if (Farm.buildLevel == 1)
+            if (Farm.buildLevel == 1 && Sawmill.buildLevel == 2 && Castle.buildLevel == 2)
             {
                 TextMeshProUGUI buttonText = buildFarmButton.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -731,11 +747,13 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                 LogManager.Instance.LogEkle("Kale ve Keresteci Binaları Level 2 Olmak Zorundadır.");
             }
 
-            else if (Farm.buildLevel == 2)
+             if (Farm.buildLevel == 2 && Warehouse.buildLevel==2 && Castle.buildLevel==3)
             {
                 TextMeshProUGUI buttonText = buildFarmButton.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -775,10 +793,14 @@ public class BuildBuilder : MonoBehaviour
                         }
                     }));
                 }
+                else
+                {
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki BuildFarm fonksiyonunu kontrol ediniz.");
+                LogManager.Instance.LogEkle("Ambar Binası Level 2 ve Kale Binası Level 3 Olmak Zorundadır.");
             }
         }
     }
@@ -796,7 +818,7 @@ public class BuildBuilder : MonoBehaviour
             Debug.Log("Barracks bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Barracks.buildLevel);
         }
 
-        if (!Barracks.wasBarracksCreated)
+        if (!Barracks.wasBarracksCreated && Sawmill.buildLevel == 1 && Blacksmith.buildLevel == 1)
         {
             barracks = gameObject.AddComponent<Barracks>();
             TextMeshProUGUI buttonText = buildBarracksButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -846,19 +868,23 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Binay� olu�turmak i�in gerekli gereksinimleri sa�lam�yorsunuz.");
+                LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
+        } else {
+             LogManager.Instance.LogEkle("Keresteci ve Demirci Binaları 1 Level Olmak Zorundadır.");
         }
-        else
+        
+
+        if (Barracks.buildLevel == 1)
         {
-            if (Barracks.buildLevel == 1)
+            if (Barracks.buildLevel == 1 && Blacksmith.buildLevel == 2 && Sawmill.buildLevel == 2 && Castle.buildLevel == 2)
             {
-                if (checkResources(barracks) && Sawmill.buildLevel >= 2 && Farm.buildLevel >= 3 && Blacksmith.buildLevel >= 2)
+                if (checkResources(barracks))
                 {
                     //E�er asker �retimi varsa buraya girme -----> Asker �retimi yaparken geli�tirilemez.
                     if (progressBarController.isUnitCreationActive)
                     {
-                        Debug.Log("Asker �retimi S�ras�nda Bina Y�kseltmesi Yap�lamaz.");
+                        LogManager.Instance.LogEkle("Asker Üretimi Sırasında Bina Yükseltmesi Yapılamaz.");
                     }
                     //yoksa gir.
                     else
@@ -905,18 +931,20 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Binay� olu�turmak i�in gerekli gereksinimleri sa�lam�yorsunuz.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                LogManager.Instance.LogEkle("Demirci , Keresteci ve Kale Binaları Level 2 Olmak Zorundadır.");
             }
 
-            else if (Barracks.buildLevel == 2)
+         if (Barracks.buildLevel == 2 && Lab.buildLevel==2 && Warehouse.buildLevel==2 && Castle.buildLevel==3)
             {
-                if (checkResources(barracks) && Sawmill.buildLevel >= 3 && Farm.buildLevel >= 3 && Blacksmith.buildLevel >= 3)
+                if (checkResources(barracks) )
                 {
                     //Asker �retimi varsa buraya girme.             
                     if (progressBarController.isUnitCreationActive)
                     {
-                        Debug.Log("Asker �retimi S�ras�nda Bina Y�kseltmesi Yap�lamaz.");
+                        LogManager.Instance.LogEkle("Asker Üretimi Sırasında Bina Yükseltmesi Yapılamaz.");
                     }
                     //yoksa gir.
                     else
@@ -961,12 +989,12 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Binay� olu�turmak i�in gerekli gereksinimleri sa�lam�yorsunuz.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildBarracks fonksiyonunu kontrol ediniz.");
+               LogManager.Instance.LogEkle("Laboratuvar ve Ambar Binaları Level 2 , Kale Binası Level 3 Olmak Zorundadır.");
             }
         }
     }
@@ -985,7 +1013,7 @@ public class BuildBuilder : MonoBehaviour
             Debug.Log("Hospital bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Hospital.buildLevel);
         }
 
-        if (!Hospital.wasHospitalCreated)
+        if (!Hospital.wasHospitalCreated && Farm.buildLevel == 1 && Barracks.buildLevel == 1)
         {
             hospital = gameObject.AddComponent<Hospital>();
             TextMeshProUGUI buttonText = buildHospitalButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -1034,19 +1062,21 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
+        } else {
+            LogManager.Instance.LogEkle("Kışla Ve Çiftlik Binaları Level 1 Olmak Zorundadır.");
         }
-        else
+        if(Hospital.buildLevel==1)
         {
-            if (Hospital.buildLevel == 1)
+            if (Hospital.buildLevel == 1 && Farm.buildLevel == 2 && Castle.buildLevel == 2)
             {
                 if (checkResources(hospital))
                 {
                     TextMeshProUGUI buttonText = buildHospitalButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (progressBarController.isHealActive)
                     {
-                        Debug.Log("�yile�tirme esnas�nda bina y�kseltmesi yap�lamaz.");
+                      LogManager.Instance.LogEkle("İyileştirme Esnasında Bina Yükseltmesi Yapılamaz.");
                     }
                     else
                     {
@@ -1090,10 +1120,12 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                LogManager.Instance.LogEkle("Çiftlik Ve Kale Binaları Level 2 Olmak Zorundadır.");
             }
-            else if (Hospital.buildLevel == 2)
+             if (Hospital.buildLevel == 2  && Lab.buildLevel==2 && Warehouse.buildLevel==2 && Castle.buildLevel==3)
             {
                 TextMeshProUGUI buttonText = buildHospitalButton.GetComponentInChildren<TextMeshProUGUI>();
                 // Kaynaklar� azalt�n
@@ -1102,7 +1134,7 @@ public class BuildBuilder : MonoBehaviour
                 {
                     if (progressBarController.isHealActive)
                     {
-                        Debug.Log("�yile�tirme esnas�nda bina y�kseltmesi yap�lamaz.");
+                        LogManager.Instance.LogEkle("İyileştirme Esnasında Bina Yükseltmesi Yapılamaz.");
                     }
                     else
                     {
@@ -1142,12 +1174,12 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                   LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildHospital fonksiyonunu kontrol ediniz.");
+               LogManager.Instance.LogEkle("Laboratuvar ve Ambar Binaları Level 2 , Kale Binası Level 3 Olmak Zorundadır.");
             }
         }
     }
@@ -1163,7 +1195,7 @@ public class BuildBuilder : MonoBehaviour
             Debug.Log("Lab bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Lab.buildLevel);
         }
 
-        if (Lab.wasLabCreated == false) // Daha �nce �retilmediyse
+        if (Lab.wasLabCreated == false && Castle.buildLevel == 2 && Blacksmith.buildLevel == 2) // Daha �nce �retilmediyse
         {
             lab = gameObject.AddComponent<Lab>();
             TextMeshProUGUI buttonText = buildLabButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -1210,10 +1242,14 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                LogManager.Instance.LogEkle("Yeterli Kaynak Bulunmamaktad�r veya Keresteci 2.Seviye De�il.");
+                LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
-        else // Daha �nce �retildi ise
+        else
+        {
+            LogManager.Instance.LogEkle("Kale ve Demirci Binası Level 2 Olmak Zorundadır.");
+        }
+        if (Lab.buildLevel == 1 && Blacksmith.buildLevel == 2 && Warehouse.buildLevel == 2 && Castle.buildLevel == 2)
         {
             if (Lab.buildLevel == 1 && ResearchButtonEvents.isResearched[3] && ResearchButtonEvents.isResearched[4]) // Lab 1.seviyeyse
             {
@@ -1258,60 +1294,69 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("L�tfen kaynaklar�n yeterli oldu�undan veya D�rt ve Be� numaral� ara�t�rman�n tamamland���ndan emin olun!");
-                }
-            }
-            else if (Lab.buildLevel == 2)
-            {
-                TextMeshProUGUI buttonText = buildLabButton.GetComponentInChildren<TextMeshProUGUI>();
-                if (checkResources(lab) && ResearchButtonEvents.isResearched[10] && ResearchButtonEvents.isResearched[11] && ResearchButtonEvents.isResearched[12] && Sawmill.buildLevel >= 3)
-                {
-                    KaynakYoneticisi.GoldAmount -= lab.buildGoldCost;
-                    KaynakYoneticisi.StoneAmount -= lab.buildStoneCost;
-                    KaynakYoneticisi.WoodAmount -= lab.buildTimberCost;
-                    KaynakYoneticisi.IronAmount -= lab.buildIronCost;
-                    KaynakYoneticisi.FoodAmount -= lab.buildFoodCost;
-                    kaynakYoneticisi.needsSync = true;
-
-                    buildLabButton.enabled = false;
-
-                    StartCoroutine(progressBarController.LabIsFinished(lab, (isFinished) =>
-                    {
-                        if (isFinished)
-                        {
-                            // Gerekli i�lemleri yap
-                            Lab.buildLevel++;
-                            kaynakYoneticisi.WarPowerArttirma(1750);
-                            // Ara�t�rma h�z�n� artt�r
-                            researchController.controlBuildLevelThreeResearches();
-                            lab.UpdateCosts();
-                            buttonText.text = "Y�kselt";
-                            buildLabButton.enabled = true;
-                            labPanelController.refreshLab();
-                            Destroy(buildLabButton.gameObject);
-                        }
-                        else
-                        {
-                            // Kaynaklar� iade et
-                            KaynakYoneticisi.GoldAmount += lab.buildGoldCost;
-                            KaynakYoneticisi.StoneAmount += lab.buildStoneCost;
-                            KaynakYoneticisi.WoodAmount += lab.buildTimberCost;
-                            KaynakYoneticisi.IronAmount += lab.buildIronCost;
-                            KaynakYoneticisi.FoodAmount += lab.buildFoodCost;
-                            buildLabButton.enabled = true;
-                            kaynakYoneticisi.needsSync = true;
-                        }
-                    }));
-                }
-                else
-                {
-                    Debug.Log("L�tfen kaynaklar�n yeterli oldu�undan, 11,12,13 numaral� ara�t�rmalar� tamamlad���n�zdan ve Kerestecinizin 3. seviye oldu�undan emin olun!");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                LogManager.Instance.LogEkle("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildLab fonksiyonunu kontrol ediniz.");
+                LogManager.Instance.LogEkle("Laboratuvarı Yükseltebilmek İçin 4 ve 5. Araştırmaları Tamamlamalısınız.");
             }
+
+        }
+        else
+        {
+            LogManager.Instance.LogEkle("Demirci, Ambar ve Kale Binası Level 2 Olmak Zorundadır.");
+        }
+         if (Lab.buildLevel == 2 && Barracks.buildLevel ==2 && Hospital.buildLevel==2 && Castle.buildLevel==3)
+        {
+            TextMeshProUGUI buttonText = buildLabButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (checkResources(lab) && ResearchButtonEvents.isResearched[10] && ResearchButtonEvents.isResearched[11] && ResearchButtonEvents.isResearched[12] && Sawmill.buildLevel >= 3)
+            {
+                KaynakYoneticisi.GoldAmount -= lab.buildGoldCost;
+                KaynakYoneticisi.StoneAmount -= lab.buildStoneCost;
+                KaynakYoneticisi.WoodAmount -= lab.buildTimberCost;
+                KaynakYoneticisi.IronAmount -= lab.buildIronCost;
+                KaynakYoneticisi.FoodAmount -= lab.buildFoodCost;
+                kaynakYoneticisi.needsSync = true;
+
+                buildLabButton.enabled = false;
+
+                StartCoroutine(progressBarController.LabIsFinished(lab, (isFinished) =>
+                {
+                    if (isFinished)
+                    {
+                        // Gerekli i�lemleri yap
+                        Lab.buildLevel++;
+                        kaynakYoneticisi.WarPowerArttirma(1750);
+                        // Ara�t�rma h�z�n� artt�r
+                        researchController.controlBuildLevelThreeResearches();
+                        lab.UpdateCosts();
+                        buttonText.text = "Y�kselt";
+                        buildLabButton.enabled = true;
+                        labPanelController.refreshLab();
+                        Destroy(buildLabButton.gameObject);
+                    }
+                    else
+                    {
+                        // Kaynaklar� iade et
+                        KaynakYoneticisi.GoldAmount += lab.buildGoldCost;
+                        KaynakYoneticisi.StoneAmount += lab.buildStoneCost;
+                        KaynakYoneticisi.WoodAmount += lab.buildTimberCost;
+                        KaynakYoneticisi.IronAmount += lab.buildIronCost;
+                        KaynakYoneticisi.FoodAmount += lab.buildFoodCost;
+                        buildLabButton.enabled = true;
+                        kaynakYoneticisi.needsSync = true;
+                    }
+                }));
+            }
+            else
+            {
+               LogManager.Instance.LogEkle("Kaynak Yetersiz veya 11,12,13. Araştırmaların Tamamlandığında Emin Olunuz.");
+            }
+        }
+        else
+        {
+            LogManager.Instance.LogEkle("Kışla ve Hastane Binaları Level 2, Kale Binası Level 3 Olmak Zorundadır.");
         }
     }
 
@@ -1334,7 +1379,7 @@ public class BuildBuilder : MonoBehaviour
             Debug.Log("Warehouse bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Warehouse.buildLevel);
         }
 
-        if (!Warehouse.wasWarehouseCreated)
+        if (!Warehouse.wasWarehouseCreated && StonePit.buildLevel == 1 && Sawmill.buildLevel == 1 && Blacksmith.buildLevel == 1)
         {
             warehouse = gameObject.AddComponent<Warehouse>();
             TextMeshProUGUI buttonText = buildWarehouseButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -1380,15 +1425,18 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Yeterli kaynak bulunmamaktad�r veya �iftlik, Demirci, Ta�Oca��, Keresteci binalar� en az birinci seviye olmal�d�r.");
+                LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
-        else
+        else {
+             LogManager.Instance.LogEkle("Keresteci , Tas Ocagı ve Demirci Binaları Level 1 Olmalıdır.");
+        }
+         if(Warehouse.buildLevel==1)
         {
-            if (Warehouse.buildLevel == 1)
+            if (Warehouse.buildLevel == 1 && StonePit.buildLevel == 2 && Sawmill.buildLevel == 2 && Castle.buildLevel == 2)
             {
                 TextMeshProUGUI buttonText = buildWarehouseButton.GetComponentInChildren<TextMeshProUGUI>();
-                if (checkResources(warehouse) && Sawmill.buildLevel >= 2 && Blacksmith.buildLevel >= 2 && Farm.buildLevel >= 2 && StonePit.buildLevel >= 2)
+                if (checkResources(warehouse))
                 {
                     KaynakYoneticisi.GoldAmount -= warehouse.buildGoldCost;
                     KaynakYoneticisi.StoneAmount -= warehouse.buildStoneCost;
@@ -1427,10 +1475,12 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r veya �iftlik, Demirci, Ta�Oca��, Keresteci binalar� en az ikinci seviye olmal�d�r.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                 LogManager.Instance.LogEkle("Tas Ocagı , Keresteci ve Kale Binaları Level 2 Olmak Zorundadır.");
             }
-            else if (Warehouse.buildLevel == 2 && Sawmill.buildLevel >= 2 && Blacksmith.buildLevel >= 2 && Farm.buildLevel >= 2 && StonePit.buildLevel >= 2)
+            if (Warehouse.buildLevel == 2 && Blacksmith.buildLevel==2 && Castle.buildLevel==3)
             {
                 TextMeshProUGUI buttonText = buildWarehouseButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (checkResources(warehouse))
@@ -1468,10 +1518,14 @@ public class BuildBuilder : MonoBehaviour
                         }
                     }));
                 }
+                else
+                {
+                     LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildWarehouse fonksiyonunu kontrol ediniz.");
+                 LogManager.Instance.LogEkle("Demirci Binası Level 2 ve Kale Binası Level 3 Olmak Zorundadır.");
             }
         }
     }
@@ -1491,7 +1545,7 @@ public class BuildBuilder : MonoBehaviour
             Debug.Log("Castle bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Castle.buildLevel);
         }
 
-        if (!Castle.wasCastleCreated)
+        if (!Castle.wasCastleCreated && Warehouse.buildLevel == 1 && StonePit.buildLevel == 1)
         {
             castle = new Castle();
             castle = gameObject.AddComponent<Castle>();
@@ -1536,12 +1590,15 @@ public class BuildBuilder : MonoBehaviour
             }
             else
             {
-                Debug.Log("Yeterli kaynak bulunmamaktad�r");
+                LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
             }
         }
-        else
+        else {
+             LogManager.Instance.LogEkle("Ambar ve Tas Ocagı Binaları 1 Level Olmak Zorundadır.");
+        }
+        if(Castle.buildLevel == 2)
         {
-            if (Castle.buildLevel == 2)
+            if (Castle.buildLevel == 2 && Warehouse.buildLevel == 2 && Blacksmith.buildLevel == 2)
             {
                 if (checkResources(castle))
                 {
@@ -1578,10 +1635,14 @@ public class BuildBuilder : MonoBehaviour
                         }
                     }));
                 }
+                else
+                {
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
             }
             else
             {
-                Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki BuildBlacksmith fonksiyonunu kontrol ediniz.");
+                LogManager.Instance.LogEkle("Ambar ve Demirci Binaları 2 Level Olmak Zorundadır.");
             }
         }
     }
@@ -1600,7 +1661,7 @@ public class BuildBuilder : MonoBehaviour
                 Debug.Log("Tower bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Tower.towerOneBuildLevel);
             }
 
-            if (!Tower.wasTowerOneCreated)
+            if (!Tower.wasTowerOneCreated && StonePit.buildLevel == 1)
             {
                 towerOne = gameObject.AddComponent<Tower>();
                 TextMeshProUGUI buttonText = buildTowerOneButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -1655,12 +1716,14 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                  LogManager.Instance.LogEkle("Tas Ocagı Binası Level 1 Olmak Zorundadır.");
             }
-            else
+            if(Tower.towerOneBuildLevel == 1)
             {
-                if (Tower.towerOneBuildLevel == 1)
+                if (Tower.towerOneBuildLevel == 1 && StonePit.buildLevel == 2 && Sawmill.buildLevel == 2 && Castle.buildLevel == 2)
                 {
                     TextMeshProUGUI buttonText = buildTowerOneButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(towerOne))
@@ -1707,11 +1770,13 @@ public class BuildBuilder : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                        LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                     }
+                } else {
+                    LogManager.Instance.LogEkle("Taş Ocagı , Keresteci ve Kale Binaları Level 2 Olmak Zorundadır.");
                 }
 
-                else if (Tower.towerOneBuildLevel == 2)
+                 if (Tower.towerOneBuildLevel == 2 && Blacksmith.buildLevel==3 && Lab.buildLevel==2 && Castle.buildLevel==3)
                 {
                     TextMeshProUGUI buttonText = buildTowerOneButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(towerOne))
@@ -1754,16 +1819,20 @@ public class BuildBuilder : MonoBehaviour
                             }
                         }));
                     }
+                    else
+                    {
+                        LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                    }
                 }
                 else
                 {
-                    Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildTowerOne fonksiyonunu kontrol ediniz.");
+                    LogManager.Instance.LogEkle("Laboratuvar Binası Level 2 , Demirci ve Kale Binaları Level 3 Olmak Zorundadır.");
                 }
             }
         }
         else
         {
-            Debug.Log("Halihaz�rda i�lem devam ederken yeni i�lem ger�ekle�tiremezsiniz.");
+              LogManager.Instance.LogEkle("Aynı Anda 2 Kule Binası Yükseltmesi Yapılamaz.");
         }
     }
 
@@ -1782,7 +1851,7 @@ public class BuildBuilder : MonoBehaviour
                 Debug.Log("Tower bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Tower.towerTwoBuildLevel);
             }
 
-            if (!Tower.wasTowerTwoCreated)
+            if (!Tower.wasTowerTwoCreated && StonePit.buildLevel == 1)
             {
                 towerTwo = gameObject.AddComponent<Tower>();
                 TextMeshProUGUI buttonText = buildTowerTwoButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -1836,12 +1905,14 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
+            } else {
+                LogManager.Instance.LogEkle("Taş Ocagı Binası Level 1 Olmak Zorundadır.");
             }
-            else
+            if(Tower.towerTwoBuildLevel == 1)
             {
-                if (Tower.towerTwoBuildLevel == 1)
+                if (Tower.towerTwoBuildLevel == 1 && StonePit.buildLevel == 2 && Sawmill.buildLevel == 2 && Castle.buildLevel == 2)
                 {
                     TextMeshProUGUI buttonText = buildTowerTwoButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(towerTwo))
@@ -1887,10 +1958,12 @@ public class BuildBuilder : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                        LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                     }
+                } else {
+                     LogManager.Instance.LogEkle("Taş Ocağı , Keresteci ve Kale Binaları Level 2 Olmak Zorundadır.");
                 }
-                else if (Tower.towerTwoBuildLevel == 2)
+                 if (Tower.towerTwoBuildLevel == 2 && Blacksmith.buildLevel==3 && Lab.buildLevel==2 && Castle.buildLevel==3)
                 {
                     TextMeshProUGUI buttonText = buildTowerTwoButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(towerTwo))
@@ -1932,16 +2005,20 @@ public class BuildBuilder : MonoBehaviour
                             }
                         }));
                     }
+                    else
+                    {
+                         LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                    }
                 }
                 else
                 {
-                    Debug.Log("Bir sorun var gibi duruyor 'BuildBuilder' scriptindeki buildTowerTwo fonksiyonunu kontrol ediniz.");
+                     LogManager.Instance.LogEkle("Laboratuvar Binası Level 2 , Demirci ve Kale Binaları Level 3 Olmak Zorundadır.");
                 }
             }
         }
         else
         {
-            Debug.Log("Halihaz�rda i�lem devam ederken yeni i�lem ger�ekle�tiremezsiniz.");
+            LogManager.Instance.LogEkle("Aynı Anda 2 Kule Binası Yükseltmesi Yapılamaz.");
         }
     }
 
@@ -1958,7 +2035,7 @@ public class BuildBuilder : MonoBehaviour
                 Debug.Log("Trap bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Trap.trapOneBuildLevel);
             }
 
-            if (!Trap.wasTrapOneCreated)
+            if (!Trap.wasTrapOneCreated && Tower.towerOneBuildLevel == 1 && Tower.towerTwoBuildLevel == 1)
             {
                 trapOne = gameObject.AddComponent<Trap>();
                 TextMeshProUGUI buttonText = buildTrapOneButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -2008,12 +2085,72 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                if (Trap.trapOneBuildLevel == 1 || Trap.trapOneBuildLevel == 2)
+                LogManager.Instance.LogEkle("Kule Binaları Level 1 Olmak Zorundadır.");
+            }
+
+
+            if (Trap.trapOneBuildLevel == 1 && Tower.towerOneBuildLevel == 2 && Tower.towerTwoBuildLevel ==2 && Sawmill.buildLevel ==2 && Castle.buildLevel ==2)
+            {
+                TextMeshProUGUI buttonText = buildTrapOneButton.GetComponentInChildren<TextMeshProUGUI>();
+                if (checkResources(trapOne))
+                {
+                    // Kaynaklar� azalt
+                    KaynakYoneticisi.GoldAmount -= trapOne.buildGoldCost;
+                    KaynakYoneticisi.StoneAmount -= trapOne.buildStoneCost;
+                    KaynakYoneticisi.WoodAmount -= trapOne.buildTimberCost;
+                    KaynakYoneticisi.IronAmount -= trapOne.buildIronCost;
+                    KaynakYoneticisi.FoodAmount -= trapOne.buildFoodCost;
+                    kaynakYoneticisi.needsSync = true;
+
+                    buildTrapOneButton.enabled = false;
+                    isAnyTrapActive = true;
+                    StartCoroutine(progressBarController.TrapIsFinished(trapOne, (isFinished) =>
+                    {
+                        if (isFinished)
+                        {
+                            Trap.trapOneBuildLevel++;
+                            kaynakYoneticisi.WarPowerArttirma(1500);
+                            //----------------InGame Scene �le Alakl�--------------------------//
+                            getPlayerData.UpgradeTrapOneStats(Trap.trapOneBuildLevel);
+                            //----------------InGame Scene �le Alakl�--------------------------//
+                            trapOne.UpdateTrapOneCosts(trapOne);
+                            buttonText.text = "Y�kselt";
+                            buildTrapOneButton.enabled = true;
+                            trapPanelController.refreshTrapOne();
+                            if (Trap.trapOneBuildLevel == 3)
+                            {
+                                Destroy(buildTrapOneButton.gameObject);
+                            }
+                            isAnyTrapActive = false;
+                        }
+                        else
+                        {
+                            KaynakYoneticisi.GoldAmount += trapOne.buildGoldCost;
+                            KaynakYoneticisi.StoneAmount += trapOne.buildStoneCost;
+                            KaynakYoneticisi.WoodAmount += trapOne.buildTimberCost;
+                            KaynakYoneticisi.IronAmount += trapOne.buildIronCost;
+                            KaynakYoneticisi.FoodAmount += trapOne.buildFoodCost;
+                            buildTrapOneButton.enabled = true;
+                            isAnyTrapActive = false;
+                            kaynakYoneticisi.needsSync = true;
+                        }
+                    }));
+                }
+                else
+                {
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
+            }
+            else
+            {
+               LogManager.Instance.LogEkle("Kule Binaları, Keresteci ve Kale Binası Level 2 Olmak Zorundadır.");
+            }
+                if (Trap.trapOneBuildLevel == 2 && Blacksmith.buildLevel == 3 && Lab.buildLevel==2 && Castle.buildLevel==3)
                 {
                     TextMeshProUGUI buttonText = buildTrapOneButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(trapOne))
@@ -2062,18 +2199,19 @@ public class BuildBuilder : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                        LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                     }
                 }
                 else
                 {
-                    Debug.Log("Bir sorun var gibi duruyor. 'BuildTrapOne' fonksiyonunu kontrol ediniz.");
+                   LogManager.Instance.LogEkle("Laboratuvar Binası Level 2, Kale ve Demirci Binaları Level 3 Olmak Zorundadır.");
                 }
-            }
+            
         }
+
         else
         {
-            Debug.Log("Halihaz�rda i�lem devam ederken yeni i�lem ger�ekle�tiremezsiniz.");
+            LogManager.Instance.LogEkle("Aynı Anda Sadece 1 Adet Tuzak Yükseltmesi Yapılabilir.");
         }
     }
 
@@ -2090,7 +2228,7 @@ public class BuildBuilder : MonoBehaviour
                 Debug.Log("Trap bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Trap.trapTwoBuildLevel);
             }
 
-            if (!Trap.wasTrapTwoCreated)
+            if (!Trap.wasTrapTwoCreated && Tower.towerOneBuildLevel == 1 && Tower.towerTwoBuildLevel == 1)
             {
                 trapTwo = gameObject.AddComponent<Trap>();
                 TextMeshProUGUI buttonText = buildTrapTwoButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -2140,12 +2278,70 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                if (Trap.trapTwoBuildLevel == 1 || Trap.trapTwoBuildLevel == 2)
+                LogManager.Instance.LogEkle("Kule Binaları Level 1 Olmak Zorundadır.");
+            }
+            if (Trap.trapTwoBuildLevel == 1 && Tower.towerOneBuildLevel==2 && Tower.towerTwoBuildLevel==2 && Sawmill.buildLevel==2 && Castle.buildLevel==2)
+            {
+                TextMeshProUGUI buttonText = buildTrapTwoButton.GetComponentInChildren<TextMeshProUGUI>();
+                if (checkResources(trapTwo))
+                {
+                    // Kaynaklar� azalt
+                    KaynakYoneticisi.GoldAmount -= trapTwo.buildGoldCost;
+                    KaynakYoneticisi.StoneAmount -= trapTwo.buildStoneCost;
+                    KaynakYoneticisi.WoodAmount -= trapTwo.buildTimberCost;
+                    KaynakYoneticisi.IronAmount -= trapTwo.buildIronCost;
+                    KaynakYoneticisi.FoodAmount -= trapTwo.buildFoodCost;
+                    kaynakYoneticisi.needsSync = true;
+
+                    buildTrapTwoButton.enabled = false;
+                    isAnyTrapActive = true;
+                    StartCoroutine(progressBarController.TrapIsFinished(trapTwo, (isFinished) =>
+                    {
+                        if (isFinished)
+                        {
+                            Trap.trapTwoBuildLevel++;
+                            kaynakYoneticisi.WarPowerArttirma(1500);
+                            //----------------InGame Scene �le Alakl�--------------------------//
+                            getPlayerData.UpgradeTrapTwoStats(Trap.trapTwoBuildLevel);
+                            //----------------InGame Scene �le Alakl�--------------------------//
+                            trapTwo.UpdateTrapTwoCosts(trapTwo);
+                            buttonText.text = "Y�kselt";
+                            buildTrapTwoButton.enabled = true;
+                            trapPanelController.refreshTrapTwo();
+                            if (Trap.trapTwoBuildLevel == 3)
+                            {
+                                Destroy(buildTrapTwoButton.gameObject);
+                            }
+                            isAnyTrapActive = false;
+                        }
+                        else
+                        {
+                            KaynakYoneticisi.GoldAmount += trapTwo.buildGoldCost;
+                            KaynakYoneticisi.StoneAmount += trapTwo.buildStoneCost;
+                            KaynakYoneticisi.WoodAmount += trapTwo.buildTimberCost;
+                            KaynakYoneticisi.IronAmount += trapTwo.buildIronCost;
+                            KaynakYoneticisi.FoodAmount += trapTwo.buildFoodCost;
+                            buildTrapTwoButton.enabled = true;
+                            isAnyTrapActive = false;
+                            kaynakYoneticisi.needsSync = true;
+                        }
+                    }));
+                }
+                else
+                {
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
+            }
+            else
+            {
+               LogManager.Instance.LogEkle("Kule Binaları, Keresteci ve Kale Binası Level 2 Olmak Zorundadır.");
+            }
+                if (Trap.trapTwoBuildLevel == 2 && Blacksmith.buildLevel==3 && Lab.buildLevel==2 && Castle.buildLevel==3)
                 {
                     TextMeshProUGUI buttonText = buildTrapTwoButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(trapTwo))
@@ -2194,18 +2390,17 @@ public class BuildBuilder : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                        LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                     }
                 }
                 else
                 {
-                    Debug.Log("Bir sorun var gibi duruyor. 'BuildTrapTwo' fonksiyonunu kontrol ediniz.");
+                    LogManager.Instance.LogEkle("Laboratuvar Binası Level 2, Kale ve Demirci Binaları Level 3 Olmak Zorundadır.");
                 }
-            }
         }
         else
         {
-            Debug.Log("Halihaz�rda i�lem devam ederken yeni i�lem ger�ekle�tiremezsiniz.");
+            LogManager.Instance.LogEkle("Aynı Anda Sadece 1 Adet Tuzak Yükseltmesi Yapılabilir.");
         }
     }
 
@@ -2222,7 +2417,7 @@ public class BuildBuilder : MonoBehaviour
                 Debug.Log("Trap bileşeni eksikti, yeniden oluşturuldu. Seviye: " + Trap.trapThreeBuildLevel);
             }
 
-            if (!Trap.wasTrapThreeCreated)
+            if (!Trap.wasTrapThreeCreated && Tower.towerOneBuildLevel == 1 && Tower.towerTwoBuildLevel == 1)
             {
                 trapThree = gameObject.AddComponent<Trap>();
                 TextMeshProUGUI buttonText = buildTrapThreeButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -2272,12 +2467,72 @@ public class BuildBuilder : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                 }
             }
             else
             {
-                if (Trap.trapThreeBuildLevel == 1 || Trap.trapThreeBuildLevel == 2)
+                LogManager.Instance.LogEkle("Kule Binaları Level 1 Olmak Zorundadır.");
+            }
+
+            if (Trap.trapThreeBuildLevel == 1 && Tower.towerOneBuildLevel==2 && Tower.towerTwoBuildLevel==2 && Sawmill.buildLevel==2 && Castle.buildLevel==2)
+            {
+                TextMeshProUGUI buttonText = buildTrapThreeButton.GetComponentInChildren<TextMeshProUGUI>();
+                if (checkResources(trapThree))
+                {
+                    // Kaynaklar� azalt
+                    KaynakYoneticisi.GoldAmount -= trapThree.buildGoldCost;
+                    KaynakYoneticisi.StoneAmount -= trapThree.buildStoneCost;
+                    KaynakYoneticisi.WoodAmount -= trapThree.buildTimberCost;
+                    KaynakYoneticisi.IronAmount -= trapThree.buildIronCost;
+                    KaynakYoneticisi.FoodAmount -= trapThree.buildFoodCost;
+                    kaynakYoneticisi.needsSync = true;
+
+                    buildTrapThreeButton.enabled = false;
+                    isAnyTrapActive = true;
+                    StartCoroutine(progressBarController.TrapIsFinished(trapThree, (isFinished) =>
+                    {
+                        if (isFinished)
+                        {
+                            Trap.trapThreeBuildLevel++;
+                            kaynakYoneticisi.WarPowerArttirma(1550);
+                            //----------------InGame Scene �le Alakl�--------------------------//
+                            getPlayerData.UpgradeTrapThreeStats(Trap.trapThreeBuildLevel);
+                            //----------------InGame Scene �le Alakl�--------------------------//
+                            trapThree.UpdateTrapThreeCosts(trapThree);
+                            buttonText.text = "Y�kselt";
+                            buildTrapThreeButton.enabled = true;
+                            trapPanelController.refreshTrapThree();
+                            if (Trap.trapThreeBuildLevel == 3)
+                            {
+                                Destroy(buildTrapThreeButton.gameObject);
+                            }
+                            isAnyTrapActive = false;
+                        }
+                        else
+                        {
+                            KaynakYoneticisi.GoldAmount += trapThree.buildGoldCost;
+                            KaynakYoneticisi.StoneAmount += trapThree.buildStoneCost;
+                            KaynakYoneticisi.WoodAmount += trapThree.buildTimberCost;
+                            KaynakYoneticisi.IronAmount += trapThree.buildIronCost;
+                            KaynakYoneticisi.FoodAmount += trapThree.buildFoodCost;
+                            buildTrapThreeButton.enabled = true;
+                            isAnyTrapActive = false;
+                            kaynakYoneticisi.needsSync = true;
+                        }
+                    }));
+                }
+                else
+                {
+                    LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
+                }
+            }
+            else
+            {
+                LogManager.Instance.LogEkle("Kule Binaları,Keresteci ve Kale Binası Level 2 Olmak Zorundadır.");
+            }
+            
+            if (Trap.trapThreeBuildLevel == 2 && Blacksmith.buildLevel==3 && Lab.buildLevel==2&&Castle.buildLevel==3)
                 {
                     TextMeshProUGUI buttonText = buildTrapThreeButton.GetComponentInChildren<TextMeshProUGUI>();
                     if (checkResources(trapThree))
@@ -2326,18 +2581,18 @@ public class BuildBuilder : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Yeterli kaynak bulunmamaktad�r.");
+                        LogManager.Instance.LogEkle("Kaynak Yetersiz.Lütfen Kaynaklarınızı Kontrol Ediniz.");
                     }
                 }
                 else
                 {
-                    Debug.Log("Bir sorun var gibi duruyor. 'BuildTrapThree' fonksiyonunu kontrol ediniz.");
+                    LogManager.Instance.LogEkle("Laboratuvar Binası Level 2, Kale ve Demirci Binaları Level 3 Olmak Zorundadır.");
                 }
             }
-        }
+
         else
         {
-            Debug.Log("Halihaz�rda i�lem devam ederken yeni i�lem ger�ekle�tiremezsiniz.");
+            LogManager.Instance.LogEkle("Aynı Anda Sadece 1 Adet Tuzak Yükseltmesi Yapılabilir.");
         }
     }
 

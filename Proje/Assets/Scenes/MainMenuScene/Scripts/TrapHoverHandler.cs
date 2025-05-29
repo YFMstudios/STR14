@@ -1,153 +1,115 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TrapHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+/// <summary>
+///   Hover sırasında ilgili tuzağın maliyet panelini gösterir
+///   ve seviye değişimini canlı olarak izler.
+/// </summary>
+public class TrapHoverHandler : MonoBehaviour,
+                                IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject Maliyet;
-    public TMP_Text goldText;     // Alt�n miktar�n� g�sterecek TMP_Text bile�eni
-    public TMP_Text woodText;     // Kereste miktar�n� g�sterecek TMP_Text bile�eni
-    public TMP_Text stoneText;    // Ta� miktar�n� g�sterecek TMP_Text bile�eni
-    public TMP_Text ironText;     // Demir miktar�n� g�sterecek TMP_Text bile�eni
-    public TMP_Text foodText;     // Yemek miktar�n� g�sterecek TMP_Text bile�eni
+    // ► Bu script hangi tuzağa bağlı?
+    public enum TrapSlot { One, Two, Three }
+    public TrapSlot trapSlot = TrapSlot.One;
 
-    void Start()
+    [Header("Maliyet Panelleri")]
+    public GameObject Maliyet1, Maliyet2, Maliyet3;
+
+    [Header("Tuzak-1 Metinleri")]
+    public TMP_Text goldText,  foodText,  ironText,  stoneText,  woodText;
+
+    [Header("Tuzak-2 Metinleri")]
+    public TMP_Text goldText2, foodText2, ironText2, stoneText2, woodText2;
+
+    [Header("Tuzak-3 Metinleri")]
+    public TMP_Text goldText3, foodText3, ironText3, stoneText3, woodText3;
+
+    /* ─────────────────────────────────── */
+    bool isHovering = false;
+    int  lastLevel  = -1;
+
+    /* ─────────────────────────────────── */
+    void Awake()
     {
-        Maliyet.SetActive(false);
+        if (Maliyet1) Maliyet1.SetActive(false);
+        if (Maliyet2) Maliyet2.SetActive(false);
+        if (Maliyet3) Maliyet3.SetActive(false);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    /* ⇢ Trap seviyeleri değişince haberdar ol */
+    void OnEnable()  => Trap.OnAnyTrapLevelChanged += ForceRefresh;
+    void OnDisable() => Trap.OnAnyTrapLevelChanged -= ForceRefresh;
+
+    /* ───────── Pointer Callbacks ───────── */
+    public void OnPointerEnter(PointerEventData _) { isHovering = true;  lastLevel = -1; }
+    public void OnPointerExit (PointerEventData _)
     {
-        if (gameObject.name == "Tuzak1Resmi")
-        {
-            if (Trap.trapOneBuildLevel == 0)
-            {
-                goldText.text = "2000";
-                foodText.text = "1200";
-                ironText.text = "750";
-                stoneText.text = "1000";
-                woodText.text = "1500";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapOneBuildLevel == 1)
-            {
-                goldText.text = "3000";
-                foodText.text = "2000";
-                ironText.text = "1500";
-                stoneText.text = "1800";
-                woodText.text = "2200";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapOneBuildLevel == 2)
-            {
-                goldText.text = "4500";
-                foodText.text = "3000";
-                ironText.text = "2000";
-                stoneText.text = "2500";
-                woodText.text = "3000";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapOneBuildLevel == 3)
-            {
-                DestroyResourceUIElements();
-            }
-        }
-        else if (gameObject.name == "Tuzak2Resmi")
-        {
-            if (Trap.trapTwoBuildLevel == 0)
-            {
-                goldText.text = "2000";
-                foodText.text = "1200";
-                ironText.text = "750";
-                stoneText.text = "1000";
-                woodText.text = "1500";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapTwoBuildLevel == 1)
-            {
-                goldText.text = "3000";
-                foodText.text = "2000";
-                ironText.text = "1500";
-                stoneText.text = "1800";
-                woodText.text = "2200";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapTwoBuildLevel == 2)
-            {
-                goldText.text = "4500";
-                foodText.text = "3000";
-                ironText.text = "2000";
-                stoneText.text = "2500";
-                woodText.text = "3000";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapTwoBuildLevel == 3)
-            {
-                DestroyResourceUIElements();
-            }
-        }
-        else if (gameObject.name == "Tuzak3Resmi")
-        {
-            if (Trap.trapThreeBuildLevel == 0)
-            {
-                goldText.text = "2000";
-                foodText.text = "1200";
-                ironText.text = "750";
-                stoneText.text = "1000";
-                woodText.text = "1500";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapThreeBuildLevel == 1)
-            {
-                goldText.text = "3000";
-                foodText.text = "2000";
-                ironText.text = "1500";
-                stoneText.text = "1800";
-                woodText.text = "2200";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapThreeBuildLevel == 2)
-            {
-                goldText.text = "4500";
-                foodText.text = "3000";
-                ironText.text = "2000";
-                stoneText.text = "2500";
-                woodText.text = "3000";
-                Maliyet.SetActive(true);
-            }
-            else if (Trap.trapThreeBuildLevel == 3)
-            {
-                DestroyResourceUIElements();
-            }
-        }
+        isHovering = false; lastLevel = -1;
+        if (Maliyet1) Maliyet1.SetActive(false);
+        if (Maliyet2) Maliyet2.SetActive(false);
+        if (Maliyet3) Maliyet3.SetActive(false);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    /* ───────── Canlı Seviye Takibi ───────── */
+    void Update()
     {
-        if(Maliyet != null)
+        if (!isHovering) return;
+
+        int curr = trapSlot switch
         {
-            Maliyet.SetActive(false);
+            TrapSlot.One   => Trap.trapOneBuildLevel,
+            TrapSlot.Two   => Trap.trapTwoBuildLevel,
+            _              => Trap.trapThreeBuildLevel
+        };
+        if (curr == lastLevel) return;
+
+        switch (trapSlot)
+        {
+            case TrapSlot.One:
+                ShowCost(curr, goldText,  foodText,  ironText,
+                               stoneText, woodText,  Maliyet1);
+                break;
+
+            case TrapSlot.Two:
+                ShowCost(curr, goldText2, foodText2, ironText2,
+                               stoneText2, woodText2, Maliyet2);
+                break;
+
+            case TrapSlot.Three:
+                ShowCost(curr, goldText3, foodText3, ironText3,
+                               stoneText3, woodText3, Maliyet3);
+                break;
         }
-        
+        lastLevel = curr;
     }
 
-    public void DestroyResourceUIElements()
+    /* ───────── Yardımcı: Seviye → Maliyet ───────── */
+    void ShowCost(int level,
+                  TMP_Text g, TMP_Text f, TMP_Text i, TMP_Text s, TMP_Text w,
+                  GameObject panel)
     {
-        // Trap seviyelerinin her ���n�n de 3 oldu�undan emin olun
-        if (Trap.trapOneBuildLevel == 3 && Trap.trapTwoBuildLevel == 3 && Trap.trapThreeBuildLevel == 3)
+        switch (level)
         {
-            // Maliyet nesnesini yok et
-            if (Maliyet != null)
-            {
-                Destroy(Maliyet);
-            }
+            case 0: g.text="160"; f.text="10";  i.text="30";
+                    s.text="120"; w.text="140"; break;
+
+            case 1: g.text="380"; f.text="25";  i.text="60";
+                    s.text="240"; w.text="300"; break;
+
+            case 2: g.text="700"; f.text="50";  i.text="90";
+                    s.text="400"; w.text="550"; break;
+
+            default:                     // level ≥ 3
+                panel.SetActive(false);  // panel gizle
+                return;
         }
-        else
-        {
-            Debug.Log("Tuzak seviyeleri 3'e ula�mad�. Nesneler yok edilemez.");
-        }
+        panel.SetActive(true);
+    }
+
+    /* ───────── Trap olayı tetiklendiğinde zorlama yenile ───────── */
+    void ForceRefresh()
+    {
+        if (isHovering) lastLevel = -1;   // Bir sonraki Update’te yeniden çizer
     }
 }

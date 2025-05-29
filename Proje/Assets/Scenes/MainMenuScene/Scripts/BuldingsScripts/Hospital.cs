@@ -10,16 +10,16 @@ public class Hospital : Building
     public static int capasity;
     public Hospital()
     {
-        // Özelliklerin baþlangýç deðerlerini atama
+        // ï¿½zelliklerin baï¿½langï¿½ï¿½ deï¿½erlerini atama
         buildingName = "Hospital";
         buildingType = BuildingType.Medical;
         health = 100;
-        buildGoldCost = 2000;    // 1. Seviye baþlangýç maliyeti
-        buildFoodCost = 1000;
-        buildIronCost = 1000;
-        buildStoneCost = 1200;
-        buildTimberCost = 1500;
-        buildTime = 1f;
+        buildGoldCost = 280;    // 1. Seviye baï¿½langï¿½ï¿½ maliyeti
+        buildFoodCost = 25;
+        buildIronCost = 30;
+        buildStoneCost = 80;
+        buildTimberCost = 110;
+        buildTime = 20f;
     }
 
 
@@ -28,21 +28,21 @@ public class Hospital : Building
     {
         if (buildLevel == 2)
         {
-            buildGoldCost = 3500;    // 2. Seviye maliyet
-            buildFoodCost = 1800;
-            buildIronCost = 1500;
-            buildStoneCost = 2000;
-            buildTimberCost = 2200;
-            buildTime = 2f;
+            buildGoldCost = 650;    // 2. Seviye maliyet
+            buildFoodCost = 50;
+            buildIronCost = 60;
+            buildStoneCost = 200;
+            buildTimberCost = 300;
+            buildTime = 30f;
         }
         else if (buildLevel == 3)
         {
-            buildGoldCost = 5000;    // 3. Seviye maliyet
-            buildFoodCost = 2500;
-            buildIronCost = 2000;
-            buildStoneCost = 3000;
-            buildTimberCost = 3500;
-            buildTime = 3f;
+            buildGoldCost = 1200;    // 3. Seviye maliyet
+            buildFoodCost = 80;
+            buildIronCost = 100;
+            buildStoneCost = 380;
+            buildTimberCost = 550;
+            buildTime = 40f;
         }
     }
 
@@ -50,15 +50,15 @@ public class Hospital : Building
     {
         if (buildLevel == 1)
         {
-            capasity = 1000;
+            capasity = 50;
         }
         else if (buildLevel == 2)
         {
-            capasity = 2500;
+            capasity = 75;
         }
         else if (buildLevel == 3)
         {
-            capasity = 3000;
+            capasity = 100;
         }
     }
 }
